@@ -40,7 +40,7 @@ function About() {
             <li>Introduction to Cybersecurity | Cisco</li>
             <li>Introduction to Data Science | Cisco</li>
             <li>IBM Cloud Essentials | IBM</li>
-            <li>Microsoft Azure AI Fundamentals - AI-900</li>
+            <li>Microsoft Azure AI Fundamentals - AI-900 (in progress)</li>
           </ul>
           
           <h3 className="text-white text-lg md:text-xl font-semibold mb-2 md:mb-3">Currently learning:</h3>
@@ -52,9 +52,8 @@ function About() {
           <p className="text-white/70 text-sm md:text-base">I love turning coffee into code ☕</p>
         </div>
         
-        {/* Right Column - Profile Photo & Download CV */}
+        {/* Right Column - Download CV Button Only (no profile photo) */}
         <div className="text-center w-full md:w-auto">
-          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 mx-auto mb-4 md:mb-6"></div>
           <button 
             onClick={handleDownloadCV}
             className="btn-secondary text-sm md:text-base"
