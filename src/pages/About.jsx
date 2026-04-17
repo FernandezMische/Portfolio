@@ -33,27 +33,33 @@ function About() {
             team environments delivering production-ready full-stack solutions.
           </p>
           
+          <h3 className="text-white text-lg md:text-xl font-semibold mb-2 md:mb-3">Certifications & Education:</h3>
+          <ul className="list-disc list-inside text-white/70 mb-4 md:mb-6 space-y-1 text-sm md:text-base">
+            <li>Full-Stack Web Development | Life Choices Academy (2025–2026)</li>
+            <li>Higher Certificate: Digital Marketing | IIE Rosebank College (2023)</li>
+            <li>Introduction to Cybersecurity | Cisco</li>
+            <li>Introduction to Data Science | Cisco</li>
+            <li>IBM Cloud Essentials | IBM</li>
+            <li>Microsoft Azure AI Fundamentals - AI-900</li>
+          </ul>
+          
           <h3 className="text-white text-lg md:text-xl font-semibold mb-2 md:mb-3">Currently learning:</h3>
           <ul className="list-disc list-inside text-white/70 mb-4 md:mb-6 space-y-1 text-sm md:text-base">
-            <li>Advanced Cloud Computing (Azure AI Fundamentals - AI-900 certified)</li>
-            <li>Cybersecurity Fundamentals (Cisco Certified)</li>
-            <li>Data Science & Analytics (IBM Cloud Essentials, Data Science with Cisco)</li>
+            <li>Hosting full-stack applications on Vercel and Render</li>
           </ul>
           
           <h3 className="text-white text-lg md:text-xl font-semibold mb-2 md:mb-3">Fun fact:</h3>
-          <p className="text-white/70 text-sm md:text-base mb-4 md:mb-6">
-            I went from creating weekly social media calendars as a waiter to building secure payment 
-            gateways and authentication systems as a full-stack developer!
-          </p>
+          <p className="text-white/70 text-sm md:text-base">I love turning coffee into code ☕</p>
         </div>
         
-        {/* Right Column - Download CV Button Only (no profile photo) */}
-        <div className="w-full md:w-auto md:min-w-[200px] flex justify-center">
+        {/* Right Column - Profile Photo & Download CV */}
+        <div className="text-center w-full md:w-auto">
+          <div className="w-32 h-32 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 mx-auto mb-4 md:mb-6"></div>
           <button 
             onClick={handleDownloadCV}
-            className="btn-primary text-sm md:text-base w-full md:w-auto"
+            className="btn-secondary text-sm md:text-base"
           >
-            📄 Download CV
+            Download CV
           </button>
         </div>
       </div>
