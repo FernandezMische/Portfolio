@@ -71,7 +71,6 @@ function App() {
       
       let newColor
       
-      // Faster color transitions - only 3 segments instead of 4
       if (scrollPercent < 0.33) {
         const t = scrollPercent / 0.33
         newColor = interpolateColor('#1A1A2E', '#2D2D5E', t)
@@ -114,8 +113,22 @@ function App() {
         <footer className="text-center py-8 border-t border-white/10 text-white/50 relative z-2 text-sm">
           <p>© 2025 | Built with React + Vite + Tailwind</p>
           <div className="mt-2 space-x-4">
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
+            <a 
+              href="https://www.linkedin.com/in/mische-fernandez-046006294/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              LinkedIn
+            </a>
+            <a 
+              href="https://github.com/FernandezMische" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors"
+            >
+              GitHub
+            </a>
           </div>
         </footer>
       </div>
