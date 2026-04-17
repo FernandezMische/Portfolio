@@ -10,6 +10,9 @@ import dashboardImg from '../assets/dashboardPage.png'
 import leaveApplicationsImg from '../assets/leaveApplications.png'
 import leaveReqPageImg from '../assets/leaveReqPage.png'
 
+// Import your Oracle APEX screenshot
+import oracleApexImg from '../assets/oracleApex.png'
+
 const projects = [
   {
     id: 1,
@@ -17,6 +20,7 @@ const projects = [
     description: "A full-stack food ordering platform built for local township businesses. I built the entire backend including authentication, payment integration with PayFast, and real-time order management. (Live hosting with Vercel and Render in progress)",
     tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "PayFast", "JWT"],
     repoLink: "https://github.com/sandiliviwe04/TownshipsEats-App",
+    liveLink: null,
     images: [
       { 
         src: loginImg,
@@ -38,6 +42,7 @@ const projects = [
     description: "A full-stack HR management platform built for tracking employees, leave requests, attendance, and performance. I worked on both frontend and backend in a team. The app features real-time calendar updates and complete leave management. (Live hosting with Vercel and Render in progress)",
     tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "Bootstrap", "Low Code CSS"],
     repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
+    liveLink: null,
     images: [
       { 
         src: dashboardImg,
@@ -55,21 +60,31 @@ const projects = [
   },
   {
     id: 3,
-    title: "Project Gamma",
-    description: "Data visualization dashboard with real-time analytics and interactive charts. (Live hosting with Vercel and Render in progress)",
-    tags: ["Next.js", "Chart.js", "Tailwind CSS", "D3.js"],
+    title: "Oracle APEX Data Analysis",
+    description: "Data analysis and visualization project on OT enterprise systems using Oracle APEX. I performed comprehensive analysis and created interactive visualizations to provide insights into enterprise operations. (Live hosting with Vercel and Render in progress)",
+    tags: ["Oracle APEX", "SQL", "Data Analysis", "Data Visualization", "OT Enterprise Systems"],
     repoLink: "#",
+    liveLink: "https://www.loom.com/share/ca839763ca27402aaa0731a8d7626e90",
     images: [
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Gamma+Image+1", description: "Project Gamma description 1" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Gamma+Image+2", description: "Project Gamma description 2" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Gamma+Image+3", description: "Project Gamma description 3" }
+      { 
+        src: oracleApexImg,
+        description: "Oracle APEX dashboard - Data analysis and visualizations on OT enterprise systems showing key metrics, trends, and operational insights." 
+      }
     ]
   }
 ]
 
 function Projects() {
   const handleRepoClick = (repoLink) => {
-    window.open(repoLink, '_blank')
+    if (repoLink && repoLink !== '#') {
+      window.open(repoLink, '_blank')
+    }
+  }
+
+  const handleLiveDemoClick = (liveLink) => {
+    if (liveLink) {
+      window.open(liveLink, '_blank')
+    }
   }
 
   return (
@@ -82,13 +97,14 @@ function Projects() {
           project={project} 
           index={index} 
           onRepoClick={handleRepoClick}
+          onLiveDemoClick={handleLiveDemoClick}
         />
       ))}
     </div>
   )
 }
 
-function ProjectSection({ project, index, onRepoClick }) {
+function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [isOverlayVisible, setIsOverlayVisible] = useState(false)
 
@@ -136,6 +152,9 @@ function ProjectSection({ project, index, onRepoClick }) {
 
   const currentDirection = getSlideDirection(currentImageIndex)
 
+  // Check if this project has a live demo link (only Oracle APEX does)
+  const hasLiveDemo = project.liveLink && project.liveLink !== '#'
+
   return (
     <div className={`py-8 md:py-16 ${!isEven ? 'bg-[#1F1F2E] -mx-4 md:-mx-8 px-4 md:px-8 rounded-xl' : ''}`}>
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center`}>
@@ -149,9 +168,17 @@ function ProjectSection({ project, index, onRepoClick }) {
             ))}
           </div>
           <div className="flex flex-wrap gap-3 md:gap-4">
+            {hasLiveDemo && (
+              <button 
+                onClick={() => onLiveDemoClick(project.liveLink)} 
+                className="btn-primary text-sm md:text-base"
+              >
+                Live Demo (Loom)
+              </button>
+            )}
             <button 
               onClick={() => onRepoClick(project.repoLink)} 
-              className="btn-primary text-sm md:text-base"
+              className="btn-secondary text-sm md:text-base"
             >
               GitHub
             </button>
@@ -195,36 +222,40 @@ function ProjectSection({ project, index, onRepoClick }) {
               </div>
             </div>
             
-            {/* Left Arrow */}
-            <button 
-              onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
-            >
-              ◀
-            </button>
+            {/* Only show arrows if more than 1 image */}
+            {project.images.length > 1 && (
+              <>
+                <button 
+                  onClick={prevImage}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
+                >
+                  ◀
+                </button>
+                <button 
+                  onClick={nextImage}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
+                >
+                  ▶
+                </button>
+              </>
+            )}
             
-            {/* Right Arrow */}
-            <button 
-              onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
-            >
-              ▶
-            </button>
-            
-            {/* Dot Indicators */}
-            <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2 z-10">
-              {project.images.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => goToImage(idx)}
-                  className={`h-1.5 md:h-2 rounded-full transition-all ${
-                    idx === currentImageIndex 
-                      ? 'bg-purple-400 w-4 md:w-6' 
-                      : 'bg-white/40 w-1.5 md:w-2 hover:bg-white/60'
-                  }`}
-                />
-              ))}
-            </div>
+            {/* Dot Indicators - only show if more than 1 image */}
+            {project.images.length > 1 && (
+              <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2 z-10">
+                {project.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => goToImage(idx)}
+                    className={`h-1.5 md:h-2 rounded-full transition-all ${
+                      idx === currentImageIndex 
+                        ? 'bg-purple-400 w-4 md:w-6' 
+                        : 'bg-white/40 w-1.5 md:w-2 hover:bg-white/60'
+                    }`}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </div>
