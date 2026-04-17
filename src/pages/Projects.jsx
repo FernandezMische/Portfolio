@@ -1,28 +1,44 @@
 import React, { useState } from 'react'
 
+// Import your Township Eats screenshots
+import loginImg from '../assets/LoginPage.png'
+import cartImg from '../assets/CartPage.png'
+import payfastImg from '../assets/PaymentPayfast.png'
+
 const projects = [
   {
     id: 1,
-    title: "Project Alpha",
-    description: "A full-stack task management application with user authentication and real-time updates.",
-    tags: ["React", "Node.js", "MongoDB", "Socket.io"],
+    title: "Township Eats",
+    description: "A full-stack food ordering platform built for local township businesses. I built the entire backend including authentication, payment integration with PayFast, and real-time order management.",
+    tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "PayFast", "JWT"],
+    repoLink: "https://github.com/sandiliviwe04/TownshipsEats-App",
+    liveLink: "#",
     images: [
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Dashboard+View", alt: "Dashboard view", description: "Dashboard view showing task organization" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Create+Task", alt: "Create task", description: "Create new task modal with priority settings" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Activity+Feed", alt: "Activity feed", description: "Real-time activity feed" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=User+Profile", alt: "User profile", description: "User profile and settings page" }
+      { 
+        src: loginImg,
+        description: "Login page with JWT authentication - Registered users can log in securely. Passwords are hashed and stored in MySQL database. New users can register an account." 
+      },
+      { 
+        src: cartImg,
+        description: "Shopping cart - Cart items and quantities are stored and updated in MySQL database in real-time." 
+      },
+      { 
+        src: payfastImg,
+        description: "PayFast payment integration using sandbox environment and PayFast JavaScript library. Email notifications sent via ITN (Instant Transaction Notifications)." 
+      }
     ]
   },
   {
     id: 2,
     title: "Project Beta",
     description: "E-commerce API and frontend with payment integration and order management system.",
-    tags: ["Express", "PostgreSQL", "Stripe", "JWT"],
+    tags: ["Express", "MySQL", "PayFast", "JWT"],
+    repoLink: "#",
+    liveLink: "#",
     images: [
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Product+Listing", alt: "Product listing", description: "Product listing page with filters" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Shopping+Cart", alt: "Shopping cart", description: "Shopping cart and checkout flow" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Payment", alt: "Payment", description: "Payment integration with Stripe" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Order+Confirmation", alt: "Order confirmation", description: "Order confirmation page" }
+      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Beta+Image+1", description: "Project Beta description 1" },
+      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Beta+Image+2", description: "Project Beta description 2" },
+      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Beta+Image+3", description: "Project Beta description 3" }
     ]
   },
   {
@@ -30,48 +46,75 @@ const projects = [
     title: "Project Gamma",
     description: "Data visualization dashboard with real-time analytics and interactive charts.",
     tags: ["Next.js", "Chart.js", "Tailwind CSS", "D3.js"],
+    repoLink: "#",
+    liveLink: "#",
     images: [
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Analytics+Dashboard", alt: "Dashboard", description: "Main dashboard with key metrics" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Interactive+Charts", alt: "Charts", description: "Interactive line charts showing trends" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Date+Filter", alt: "Filter", description: "Data filtering and date range selector" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Export", alt: "Export", description: "Export report modal with PDF option" }
+      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Gamma+Image+1", description: "Project Gamma description 1" },
+      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Gamma+Image+2", description: "Project Gamma description 2" },
+      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Gamma+Image+3", description: "Project Gamma description 3" }
     ]
   }
 ]
 
 function Projects() {
+  const handleLiveDemo = () => {
+    window.open('https://hosting-with-vercel-render-in-progress.com', '_blank')
+  }
+
+  const handleRepoClick = (repoLink) => {
+    window.open(repoLink, '_blank')
+  }
+
   return (
     <div className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16">
       <h1 className="text-white text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Projects</h1>
       
       {projects.map((project, index) => (
-        <ProjectSection key={project.id} project={project} index={index} />
+        <ProjectSection 
+          key={project.id} 
+          project={project} 
+          index={index} 
+          onLiveDemo={handleLiveDemo}
+          onRepoClick={handleRepoClick}
+        />
       ))}
     </div>
   )
 }
 
-function ProjectSection({ project, index }) {
+function ProjectSection({ project, index, onLiveDemo, onRepoClick }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
+  const [isOverlayVisible, setIsOverlayVisible] = useState(false)
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % project.images.length)
+    setIsOverlayVisible(false)
   }
 
   const prevImage = () => {
     setCurrentImageIndex((prev) => (prev - 1 + project.images.length) % project.images.length)
+    setIsOverlayVisible(false)
+  }
+
+  const goToImage = (idx) => {
+    setCurrentImageIndex(idx)
+    setIsOverlayVisible(false)
+  }
+
+  // Handle tap on mobile (click/tap toggles overlay)
+  const handleImageTap = () => {
+    setIsOverlayVisible(!isOverlayVisible)
   }
 
   const isEven = index % 2 === 0
   
-  // Different slide directions for each carousel image - STORED PER IMAGE
+  // Different slide directions for each carousel image
   const getSlideDirection = (imageIndex) => {
     const directions = [
-      'translate-x-[-100%]',  // from left
-      'translate-x-[100%]',   // from right
-      'translate-y-[-100%]',  // from top
-      'translate-y-[100%]'    // from bottom
+      'translate-x-[-100%]',
+      'translate-x-[100%]',
+      'translate-y-[-100%]',
+      'translate-y-[100%]'
     ]
     return directions[imageIndex % directions.length]
   }
@@ -91,36 +134,48 @@ function ProjectSection({ project, index }) {
             ))}
           </div>
           <div className="flex flex-wrap gap-3 md:gap-4">
-            <button className="btn-primary text-sm md:text-base">Live Demo</button>
-            <button className="btn-secondary text-sm md:text-base">GitHub</button>
+            <button 
+              onClick={onLiveDemo} 
+              className="btn-primary text-sm md:text-base"
+            >
+              Live Demo
+            </button>
+            <button 
+              onClick={() => onRepoClick(project.repoLink)} 
+              className="btn-secondary text-sm md:text-base"
+            >
+              GitHub
+            </button>
           </div>
         </div>
         
         {/* Carousel */}
         <div className="flex-1 w-full">
-          <div 
-            className="relative bg-[#2D2D4A] rounded-xl overflow-hidden border border-white/15 shadow-lg"
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-          >
+          <div className="relative bg-[#2D2D4A] rounded-xl overflow-hidden border border-white/15 shadow-lg">
             <div className="relative overflow-hidden">
               <img 
                 src={project.images[currentImageIndex].src}
-                alt={project.images[currentImageIndex].alt}
-                className="w-full h-56 sm:h-64 md:h-80 object-cover"
+                alt={project.images[currentImageIndex].description}
+                className="w-full h-56 sm:h-64 md:h-80 object-cover cursor-pointer"
+                onClick={handleImageTap}
               />
               
-              {/* Transparent overlay - very low opacity */}
+              {/* Subtle dark tint overlay */}
               <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
               
-              {/* FULL-SIZE slide-in box that appears on hover */}
+              {/* Slide-in Description Box - appears on hover (desktop) or tap (mobile) */}
               <div 
-                className={`absolute inset-0 flex items-center justify-center text-center p-4 md:p-6 transition-all duration-700 ease-out ${
-                  isHovered ? 'transform translate-x-0 translate-y-0 opacity-100' : `transform ${currentDirection} opacity-0`
-                }`}
+                className={`
+                  absolute inset-0 flex items-center justify-center text-center p-4 md:p-6
+                  transition-all duration-700 ease-out
+                  ${isOverlayVisible 
+                    ? 'transform translate-x-0 translate-y-0 opacity-100' 
+                    : `transform ${currentDirection} opacity-0`
+                  }
+                `}
               >
                 <div className="w-full h-full bg-black/70 backdrop-blur-sm rounded-lg flex items-center justify-center p-6 md:p-8">
-                  <p className="text-white text-base md:text-lg font-medium leading-relaxed">
+                  <p className="text-white text-sm md:text-base font-medium leading-relaxed">
                     {project.images[currentImageIndex].description}
                   </p>
                 </div>
@@ -148,7 +203,7 @@ function ProjectSection({ project, index }) {
               {project.images.map((_, idx) => (
                 <button
                   key={idx}
-                  onClick={() => setCurrentImageIndex(idx)}
+                  onClick={() => goToImage(idx)}
                   className={`h-1.5 md:h-2 rounded-full transition-all ${
                     idx === currentImageIndex 
                       ? 'bg-purple-400 w-4 md:w-6' 
