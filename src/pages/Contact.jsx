@@ -122,6 +122,9 @@ function Contact() {
             <p className="text-white/70 text-sm md:text-base break-all">
               📧 chefernandez448@gmail.com
             </p>
+            <p className="text-white/70 text-sm md:text-base break-all">
+              📞 +27 66 421 3810
+            </p>
             <a 
               href="https://www.linkedin.com/in/mische-fernandez-046006294/" 
               target="_blank" 
