@@ -5,6 +5,11 @@ import loginImg from '../assets/LoginPage.png'
 import cartImg from '../assets/CartPage.png'
 import payfastImg from '../assets/PaymentPayfast.png'
 
+// Import your HR Management screenshots
+import dashboardImg from '../assets/dashboardPage.png'
+import leaveApplicationsImg from '../assets/leaveApplications.png'
+import leaveReqPageImg from '../assets/leaveReqPage.png'
+
 const projects = [
   {
     id: 1,
@@ -29,14 +34,23 @@ const projects = [
   },
   {
     id: 2,
-    title: "Project Beta",
-    description: "E-commerce API and frontend with payment integration and order management system. (Live hosting with Vercel and Render in progress)",
-    tags: ["Express", "MySQL", "PayFast", "JWT"],
-    repoLink: "#",
+    title: "HR Management System",
+    description: "A full-stack HR management platform built for tracking employees, leave requests, attendance, and performance. I worked on both frontend and backend in a team. The app features real-time calendar updates and complete leave management. (Live hosting with Vercel and Render in progress)",
+    tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "Bootstrap", "Low Code CSS"],
+    repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
     images: [
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Beta+Image+1", description: "Project Beta description 1" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Beta+Image+2", description: "Project Beta description 2" },
-      { src: "https://placehold.co/600x400/3D3D6B/FFFFFF?text=Project+Beta+Image+3", description: "Project Beta description 3" }
+      { 
+        src: dashboardImg,
+        description: "Dashboard - Real-time overview of employees, leave requests, attendance tracking, and performance metrics. The calendar displays leave requests in real-time and everything syncs with MySQL database." 
+      },
+      { 
+        src: leaveApplicationsImg,
+        description: "Leave Application Form - Employees can submit leave requests with full name, entitlement, date range, session type, attachments, and reason. All data is stored in MySQL." 
+      },
+      { 
+        src: leaveReqPageImg,
+        description: "Leave Requests Overview - View all pending and approved leave requests. Managers can approve or deny requests. All status updates sync to MySQL database and reflect on the dashboard calendar." 
+      }
     ]
   },
   {
@@ -162,7 +176,7 @@ function ProjectSection({ project, index, onRepoClick }) {
               {/* Subtle dark tint overlay */}
               <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
               
-              {/* Slide-in Description Box - description phases in WITH the overlay */}
+              {/* Slide-in Description Box */}
               <div 
                 className={`
                   absolute inset-0 flex items-center justify-center text-center p-4 md:p-6
