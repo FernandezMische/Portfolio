@@ -43,7 +43,7 @@ function Navbar() {
             <li><Link to="/about" className="block text-white/80 hover:text-white transition-colors py-1" onClick={() => setIsOpen(false)}>About</Link></li>
             <li><Link to="/projects" className="block text-white/80 hover:text-white transition-colors py-1" onClick={() => setIsOpen(false)}>Projects</Link></li>
             <li><Link to="/contact" className="block text-white/80 hover:text-white transition-colors py-1" onClick={() => setIsOpen(false)}>Contact</Link></li>
-            <li><Link to="/cv" className="block text-white/80 hover:text-white transition-colors py-1" onClick={() => setIsOpen(false)}>CV</Link></li>
+          
           </ul>
         </div>
       )}
