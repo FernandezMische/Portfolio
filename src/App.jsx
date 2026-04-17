@@ -5,7 +5,6 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
-import CV from './pages/CV'
 
 const interpolateColor = (color1, color2, t) => {
   const hex1 = color1.slice(1)
@@ -107,7 +106,6 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/cv" element={<CV />} />
           </Routes>
         </main>
         <footer className="text-center py-8 border-t border-white/10 text-white/50 relative z-2 text-sm">
