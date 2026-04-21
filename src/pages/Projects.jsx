@@ -17,18 +17,18 @@ const projects = [
   {
     id: 1,
     title: "Township Eats",
-    description: "A full-stack food ordering platform built for local township businesses. I built the entire backend including authentication, payment integration with PayFast, and real-time order management.",
-    tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "PayFast", "JWT"],
+    description: "A full-stack food ordering platform built for local township businesses. I built the entire backend including authentication, payment integration with PayFast, and real-time order management. The app is fully hosted on Vercel (frontend), Render (backend), and TiDB (AWS) for the database.",
+    tags: ["Vue.js", "Vite", "Node.js", "Express", "TiDB (AWS)", "PayFast", "JWT", "Vercel", "Render"],
     repoLink: "https://github.com/sandiliviwe04/TownshipsEats-App",
     liveLink: "https://townships-eats-app.vercel.app/",
     images: [
       { 
         src: loginImg,
-        description: "Login page with JWT authentication - Passwords are hashed and stored in MySQL database" 
+        description: "Login page with JWT authentication - Passwords are hashed and stored in TiDB database on AWS" 
       },
       { 
         src: cartImg,
-        description: "Shopping cart - Cart items and quantities update in real-time in MySQL database" 
+        description: "Shopping cart - Cart items and quantities update in real-time in TiDB database on AWS" 
       },
       { 
         src: payfastImg,
