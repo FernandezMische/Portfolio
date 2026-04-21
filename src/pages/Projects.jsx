@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-// Import your Kasi Eats screenshots
+// Import your Township Eats screenshots
 import loginImg from '../assets/LoginPage.png'
 import cartImg from '../assets/CartPage.png'
 import payfastImg from '../assets/PaymentPayfast.png'
@@ -16,7 +16,7 @@ import oracleApexImg from '../assets/oracleApex.png'
 const projects = [
   {
     id: 1,
-    title: "Kasi Eats",
+    title: "Township Eats",
     description: "A full-stack food ordering platform built for local township businesses. I built the entire backend including authentication, payment integration with PayFast, and real-time order management.",
     tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "PayFast", "JWT"],
     repoLink: "https://github.com/sandiliviwe04/TownshipsEats-App",
