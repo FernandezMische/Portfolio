@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-// Import your Township Eats screenshots
+// Import your Kasi Eats screenshots
 import loginImg from '../assets/LoginPage.png'
 import cartImg from '../assets/CartPage.png'
 import payfastImg from '../assets/PaymentPayfast.png'
@@ -16,11 +16,11 @@ import oracleApexImg from '../assets/oracleApex.png'
 const projects = [
   {
     id: 1,
-    title: "Township Eats",
-    description: "A full-stack food ordering platform built for local township businesses. I built the entire backend including authentication, payment integration with PayFast, and real-time order management. (Live hosting with Vercel and Render in progress)",
+    title: "Kasi Eats",
+    description: "A full-stack food ordering platform built for local township businesses. I built the entire backend including authentication, payment integration with PayFast, and real-time order management.",
     tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "PayFast", "JWT"],
     repoLink: "https://github.com/sandiliviwe04/TownshipsEats-App",
-    liveLink: null,
+    liveLink: "https://townships-eats-app.vercel.app/",
     images: [
       { 
         src: loginImg,
@@ -61,7 +61,7 @@ const projects = [
   {
     id: 3,
     title: "Oracle APEX Data Analysis",
-    description: "Data analysis and visualization project on OT enterprise systems using Oracle APEX. I performed comprehensive analysis and created interactive visualizations to provide insights into enterprise operations. (Live hosting with Vercel and Render in progress)",
+    description: "Data analysis and visualization project on OT enterprise systems using Oracle APEX. I performed comprehensive analysis and created interactive visualizations to provide insights into enterprise operations.",
     tags: ["Oracle APEX", "SQL", "Data Analysis", "Data Visualization", "OT Enterprise Systems"],
     repoLink: "#",
     liveLink: "https://www.loom.com/share/ca839763ca27402aaa0731a8d7626e90",
@@ -123,7 +123,6 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
     setIsOverlayVisible(false)
   }
 
-  // Handle hover for desktop
   const handleMouseEnter = () => {
     setIsOverlayVisible(true)
   }
@@ -132,14 +131,12 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
     setIsOverlayVisible(false)
   }
 
-  // Handle tap for mobile
   const handleImageTap = () => {
     setIsOverlayVisible(!isOverlayVisible)
   }
 
   const isEven = index % 2 === 0
   
-  // Different slide directions for each carousel image
   const getSlideDirection = (imageIndex) => {
     const directions = [
       'translate-x-[-100%]',
@@ -151,14 +148,11 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
   }
 
   const currentDirection = getSlideDirection(currentImageIndex)
-
-  // Check if this project has a live demo link (only Oracle APEX does)
   const hasLiveDemo = project.liveLink && project.liveLink !== '#'
 
   return (
     <div className={`py-8 md:py-16 ${!isEven ? 'bg-[#1F1F2E] -mx-4 md:-mx-8 px-4 md:px-8 rounded-xl' : ''}`}>
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center`}>
-        {/* Project Info */}
         <div className="flex-1">
           <h2 className="text-white text-2xl md:text-3xl font-bold mb-3 md:mb-4">{project.title}</h2>
           <p className="text-white/70 mb-4 leading-relaxed text-sm md:text-base">{project.description}</p>
@@ -173,7 +167,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                 onClick={() => onLiveDemoClick(project.liveLink)} 
                 className="btn-primary text-sm md:text-base"
               >
-                Live Demo (Loom)
+                Live Demo
               </button>
             )}
             <button 
@@ -185,7 +179,6 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
           </div>
         </div>
         
-        {/* Carousel */}
         <div className="flex-1 w-full">
           <div 
             className="relative bg-[#2D2D4A] rounded-xl overflow-hidden border border-white/15 shadow-lg"
@@ -200,10 +193,8 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                 onClick={handleImageTap}
               />
               
-              {/* Subtle dark tint overlay */}
               <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
               
-              {/* Slide-in Description Box */}
               <div 
                 className={`
                   absolute inset-0 flex items-center justify-center text-center p-4 md:p-6
@@ -222,7 +213,6 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
               </div>
             </div>
             
-            {/* Only show arrows if more than 1 image */}
             {project.images.length > 1 && (
               <>
                 <button 
@@ -240,7 +230,6 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
               </>
             )}
             
-            {/* Dot Indicators - only show if more than 1 image */}
             {project.images.length > 1 && (
               <div className="absolute bottom-2 md:bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5 md:gap-2 z-10">
                 {project.images.map((_, idx) => (
