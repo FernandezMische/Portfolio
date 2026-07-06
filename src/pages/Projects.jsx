@@ -42,22 +42,22 @@ const projects = [
     description: "replacing hr with futurepath flutter app",
     tags: [ "supabase", "flutter", "native development"],
     repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
-    liveLink: "downloadAPKforandroid",
-    images: [
-      // { 
-      //   src: dashboardImg,
-      //   description: "Dashboard - Real-time overview of employees, leave requests, attendance tracking, and performance metrics. The calendar displays leave requests in real-time and everything syncs with MySQL database." 
-      // },
-      // { 
-      //   src: leaveApplicationsImg,
-      //   description: "Leave Application Form - Employees can submit leave requests with full name, entitlement, date range, session type, attachments, and reason. All data is stored in MySQL." 
-      // },
-      // { 
-      //   src: leaveReqPageImg,
-      //   description: "Leave Requests Overview - View all pending and approved leave requests. Managers can approve or deny requests. All status updates sync to MySQL database and reflect on the dashboard calendar." 
-      // }
+    liveLink: "downloadAPKforandroid"
+    // images: [
+    //   // { 
+    //   //   src: dashboardImg,
+    //   //   description: "Dashboard - Real-time overview of employees, leave requests, attendance tracking, and performance metrics. The calendar displays leave requests in real-time and everything syncs with MySQL database." 
+    //   // },
+    //   // { 
+    //   //   src: leaveApplicationsImg,
+    //   //   description: "Leave Application Form - Employees can submit leave requests with full name, entitlement, date range, session type, attachments, and reason. All data is stored in MySQL." 
+    //   // },
+    //   // { 
+    //   //   src: leaveReqPageImg,
+    //   //   description: "Leave Requests Overview - View all pending and approved leave requests. Managers can approve or deny requests. All status updates sync to MySQL database and reflect on the dashboard calendar." 
+    //   // }
     
-    ]
+    // ]
   },
   {
     id: 3,
