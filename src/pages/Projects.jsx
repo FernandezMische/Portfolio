@@ -6,9 +6,9 @@ import cartImg from '../assets/CartPage.png'
 import payfastImg from '../assets/PaymentPayfast.png'
 
 // Import your HR Management screenshots
-import dashboardImg from '../assets/dashboardPage.png'
-import leaveApplicationsImg from '../assets/leaveApplications.png'
-import leaveReqPageImg from '../assets/leaveReqPage.png'
+// import dashboardImg from '../assets/dashboardPage.png'
+// import leaveApplicationsImg from '../assets/leaveApplications.png'
+// import leaveReqPageImg from '../assets/leaveReqPage.png'
 
 // Import your Oracle APEX screenshot
 import oracleApexImg from '../assets/oracleApex.png'
@@ -38,24 +38,25 @@ const projects = [
   },
   {
     id: 2,
-    title: "HR Management System",
+    title: "futurePath",
     description: "A full-stack HR management platform built for tracking employees, leave requests, attendance, and performance. I worked on both frontend and backend in a team. The app features real-time calendar updates and complete leave management. (Live hosting with Vercel and Render in progress)",
     tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "Bootstrap", "Low Code CSS"],
     repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
-    liveLink: null,
+    liveLink: "downloadAPKforandroid",
     images: [
-      { 
-        src: dashboardImg,
-        description: "Dashboard - Real-time overview of employees, leave requests, attendance tracking, and performance metrics. The calendar displays leave requests in real-time and everything syncs with MySQL database." 
-      },
-      { 
-        src: leaveApplicationsImg,
-        description: "Leave Application Form - Employees can submit leave requests with full name, entitlement, date range, session type, attachments, and reason. All data is stored in MySQL." 
-      },
-      { 
-        src: leaveReqPageImg,
-        description: "Leave Requests Overview - View all pending and approved leave requests. Managers can approve or deny requests. All status updates sync to MySQL database and reflect on the dashboard calendar." 
-      }
+      // { 
+      //   src: dashboardImg,
+      //   description: "Dashboard - Real-time overview of employees, leave requests, attendance tracking, and performance metrics. The calendar displays leave requests in real-time and everything syncs with MySQL database." 
+      // },
+      // { 
+      //   src: leaveApplicationsImg,
+      //   description: "Leave Application Form - Employees can submit leave requests with full name, entitlement, date range, session type, attachments, and reason. All data is stored in MySQL." 
+      // },
+      // { 
+      //   src: leaveReqPageImg,
+      //   description: "Leave Requests Overview - View all pending and approved leave requests. Managers can approve or deny requests. All status updates sync to MySQL database and reflect on the dashboard calendar." 
+      // }
+    
     ]
   },
   {
