@@ -43,8 +43,7 @@ const projects = [
     description: "replacing hr with futurepath flutter app",
     tags: [ "supabase", "flutter", "native development"],
     repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
-    ApkDownload,
-    
+    liveLink: <ApkDownload />,
     images: [
       { 
         
