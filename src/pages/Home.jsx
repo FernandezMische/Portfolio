@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -56,8 +55,8 @@ function Home() {
       
       {/* Call to Action Buttons */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Link to="/projects" className="btn-primary text-center">View My Work</Link>
-        <Link to="/contact" className="btn-secondary text-center">Get In Touch</Link>
+        <a href="#projects" className="btn-primary text-center">View My Work</a>
+        <a href="#contact" className="btn-secondary text-center">Get In Touch</a>
       </div>
     </div>
   )

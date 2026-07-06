@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -89,8 +88,7 @@ function App() {
   }, [])
 
   return (
-    <Router>
-      <div 
+    <div 
         style={{ 
           backgroundColor: bgColor,
           transition: 'background-color 0.15s ease',
@@ -101,12 +99,18 @@ function App() {
         <FloatingCode />
         <Navbar />
         <main style={{ position: 'relative', zIndex: 2 }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <section id="home" className="scroll-mt-24">
+            <Home />
+          </section>
+          <section id="about" className="scroll-mt-24">
+            <About />
+          </section>
+          <section id="projects" className="scroll-mt-24">
+            <Projects />
+          </section>
+          <section id="contact" className="scroll-mt-24">
+            <Contact />
+          </section>
         </main>
         <footer className="text-center py-8 border-t border-white/10 text-white/50 relative z-2 text-sm">
           <p>© 2025 | Built with React + Vite + Tailwind</p>
@@ -129,8 +133,7 @@ function App() {
             </a>
           </div>
         </footer>
-      </div>
-    </Router>
+    </div>
   )
 }
 
