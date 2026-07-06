@@ -12,7 +12,7 @@ import payfastImg from '../assets/PaymentPayfast.png'
 
 // Import your Oracle APEX screenshot
 import oracleApexImg from '../assets/oracleApex.png'
-import ApkDownload from '../components/apkDownload'
+import AppRecord from '../assets/AppRecord.mp4'
 
 const projects = [
   {
@@ -43,21 +43,13 @@ const projects = [
     description: "replacing hr with futurepath flutter app",
     tags: [ "supabase", "flutter", "native development"],
     repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
-    liveLink: <ApkDownload />,
+    liveLink: AppRecord,
     images: [
       { 
-        
-        description: "Dashboard - Real-time overview of employees, leave requests, attendance tracking, and performance metrics. The calendar displays leave requests in real-time and everything syncs with MySQL database." 
-      },
-      { 
-        
-        description: "Leave Application Form - Employees can submit leave requests with full name, entitlement, date range, session type, attachments, and reason. All data is stored in MySQL." 
-      },
-      { 
-        
-        description: "Leave Requests Overview - View all pending and approved leave requests. Managers can approve or deny requests. All status updates sync to MySQL database and reflect on the dashboard calendar." 
+        src: AppRecord,
+        type: "video",
+        description: "FuturePath app recording - A preview of the Flutter app experience." 
       }
-    
     ]
   },
   {
@@ -188,12 +180,24 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
             onMouseLeave={handleMouseLeave}
           >
             <div className="relative overflow-hidden">
-              <img 
-                src={project.images[currentImageIndex].src}
-                alt={project.images[currentImageIndex].description}
-                className="w-full h-56 sm:h-64 md:h-80 object-cover cursor-pointer"
-                onClick={handleImageTap}
-              />
+              {project.images[currentImageIndex].type === 'video' ? (
+                <video
+                  src={project.images[currentImageIndex].src}
+                  className="w-full h-56 sm:h-64 md:h-80 object-cover cursor-pointer"
+                  onClick={handleImageTap}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              ) : (
+                <img 
+                  src={project.images[currentImageIndex].src}
+                  alt={project.images[currentImageIndex].description}
+                  className="w-full h-56 sm:h-64 md:h-80 object-cover cursor-pointer"
+                  onClick={handleImageTap}
+                />
+              )}
               
               <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
               
@@ -221,13 +225,13 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                   onClick={prevImage}
                   className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
                 >
-                  ◀
+                  â—€
                 </button>
                 <button 
                   onClick={nextImage}
                   className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
                 >
-                  ▶
+                  â–¶
                 </button>
               </>
             )}
