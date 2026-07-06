@@ -12,6 +12,7 @@ import payfastImg from '../assets/PaymentPayfast.png'
 
 // Import your Oracle APEX screenshot
 import oracleApexImg from '../assets/oracleApex.png'
+import ApkDownload from '../components/apkDownload'
 
 const projects = [
   {
@@ -38,11 +39,12 @@ const projects = [
   },
   {
     id: 2,
-    title: "futurePath",
+    title: "FuturePath",
     description: "replacing hr with futurepath flutter app",
     tags: [ "supabase", "flutter", "native development"],
     repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
-    liveLink: "downloadAPKforandroid",
+    ApkDownload,
+    
     images: [
       { 
         
