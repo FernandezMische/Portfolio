@@ -39,8 +39,8 @@ const projects = [
   {
     id: 2,
     title: "futurePath",
-    description: "A full-stack HR management platform built for tracking employees, leave requests, attendance, and performance. I worked on both frontend and backend in a team. The app features real-time calendar updates and complete leave management. (Live hosting with Vercel and Render in progress)",
-    tags: ["Vue.js", "Vite", "Node.js", "Express", "MySQL", "Bootstrap", "Low Code CSS"],
+    description: "replacing hr with futurepath flutter app",
+    tags: [ "supabase", "flutter", "native development"],
     repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
     liveLink: "downloadAPKforandroid",
     images: [
