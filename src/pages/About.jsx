@@ -4,10 +4,10 @@ import profileImg from '../assets/MyProfile.png'
 function About() {
   // Function to handle CV download
   const handleDownloadCV = () => {
-    const pdfUrl = '/MISCHE FERNANDEZ CV 2026.pdf'
+    const pdfUrl = '/MISCHE FERNANDEZ CV 2026 (6).pdf'
     const link = document.createElement('a')
     link.href = pdfUrl
-    link.download = 'MISCHE FERNANDEZ CV 2026.pdf'
+    link.download = 'MISCHE FERNANDEZ CV 2026 (6).pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -35,24 +35,21 @@ function About() {
           <div className="bg-[#1F1F2E] rounded-xl p-5 border border-white/10">
             <h3 className="text-purple-400 text-lg font-semibold mb-2">Who I Am</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              Results-driven full-stack developer and top achiever at Life Choices Academy, specializing in 
-              backend development, authentication systems, and payment integration.
+              I am currently an intern team lead at Life Choices, where I manage a team of developers while still coding from time to time. I am creative, curious, and enjoy solving problems through practical software solutions.
             </p>
           </div>
 
           <div className="bg-[#1F1F2E] rounded-xl p-5 border border-white/10">
             <h3 className="text-purple-400 text-lg font-semibold mb-2">My Journey into Code</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              It started in 2023 while studying Marketing. A math module forced me to teach myself pure math — 
-              and that's when I fell in love with logic and problem-solving. My coding journey began with 
-              SQL and data analytics, and I never looked back.
+              My coding journey began while I was still in college, and it grew from curiosity into a real passion for building useful digital experiences. I started with SQL and data analytics, then expanded into full-stack and mobile development.
             </p>
           </div>
 
           <div className="bg-[#1F1F2E] rounded-xl p-5 border border-white/10">
             <h3 className="text-purple-400 text-lg font-semibold mb-2">Currently Learning</h3>
             <p className="text-white/70 text-sm leading-relaxed">
-              Hosting full-stack applications on Vercel and Render
+              I am currently enjoying cross-platform application development, while also growing my skills in C# and .NET.
             </p>
           </div>
 
@@ -74,9 +71,11 @@ function About() {
               <span className="tech-pill text-xs">Node.js</span>
               <span className="tech-pill text-xs">Express</span>
               <span className="tech-pill text-xs">MySQL</span>
+              <span className="tech-pill text-xs">Supabase</span>
+              <span className="tech-pill text-xs">Firebase</span>
               <span className="tech-pill text-xs">PHP</span>
               <span className="tech-pill text-xs">Tailwind</span>
-              <span className="tech-pill text-xs">Bootstrap</span>
+              <span className="tech-pill text-xs">Flutter</span>
               <span className="tech-pill text-xs">Git</span>
             </div>
           </div>
@@ -90,7 +89,7 @@ function About() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-purple-400">▹</span>
-                Higher Certificate: Digital Marketing | IIE Rosebank College (2023)
+                Higher Certificate: Digital Marketing | IIE Rosebank College NQF5 (2023)
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-purple-400">▹</span>

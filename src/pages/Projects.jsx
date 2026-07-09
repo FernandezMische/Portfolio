@@ -40,15 +40,15 @@ const projects = [
   {
     id: 2,
     title: "FuturePath",
-    description: "replacing hr with futurepath flutter app",
+    description: "A Flutter app for job opportunities and courses, built with Supabase and role-based authentication.",
     tags: [ "supabase", "flutter", "native development"],
-    repoLink: "https://github.com/marcofisher21-svg/Group-12-repo/tree/main",
+    repoLink: "https://github.com/lcs-cohort-17/FuturePath-Employment-Hub/tree/phoenix/qa-uiux/sprint2-navmerge",
     liveLink: AppRecord,
     images: [
       { 
         src: AppRecord,
         type: "video",
-        description: "FuturePath app recording - A preview of the Flutter app experience." 
+        description: "FuturePath app recording - Job opportunities, courses, and role-based access in the Flutter app."
       }
     ]
   },

@@ -29,9 +29,8 @@ function Home() {
         
         <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-4">
           <span className="tech-pill">JavaScript</span>
-          <span className="tech-pill">HTML/CSS</span>
+          <span className="tech-pill">Python</span>
           <span className="tech-pill">Tailwind</span>
-          <span className="tech-pill">Bootstrap</span>
         </div>
         <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-4">
           <span className="tech-pill">Vue.js / Vite</span>
@@ -42,14 +41,13 @@ function Home() {
         <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-4">
           <span className="tech-pill">PHP</span>
           <span className="tech-pill">MySQL</span>
-          <span className="tech-pill">Python</span>
+          <span className="tech-pill">Supabase</span>
           <span className="tech-pill">Git</span>
         </div>
         <div className="flex flex-wrap justify-center gap-2 md:gap-3">
-          <span className="tech-pill">Power BI</span>
-          <span className="tech-pill">Tableau</span>
-          <span className="tech-pill">APEX Oracle</span>
-          <span className="tech-pill">Azure AI</span>
+          <span className="tech-pill">HTML/CSS</span>
+          <span className="tech-pill">Flutter</span>
+          <span className="tech-pill">Firebase</span>
         </div>
       </div>
       
