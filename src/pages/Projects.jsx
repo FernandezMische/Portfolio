@@ -15,6 +15,23 @@ import oracleApexImg from '../assets/oracleApex.png'
 import AppRecord from '../assets/AppRecord.mp4'
 
 const projects = [
+  
+  {
+    id: 2,
+    title: "FuturePath",
+    description: "A Flutter app for job opportunities and courses, built with Supabase and role-based authentication.",
+    tags: [ "supabase", "flutter", "native development"],
+    repoLink: "https://github.com/lcs-cohort-17/FuturePath-Employment-Hub/tree/phoenix/qa-uiux/sprint2-navmerge",
+    liveLink: AppRecord,
+    images: [
+      { 
+        src: AppRecord,
+        type: "video",
+        description: "FuturePath app recording - Job opportunities, courses, and role-based access in the Flutter app."
+      }
+    ]
+  },
+
   {
     id: 1,
     title: "Township Eats",
@@ -37,21 +54,7 @@ const projects = [
       }
     ]
   },
-  {
-    id: 2,
-    title: "FuturePath",
-    description: "A Flutter app for job opportunities and courses, built with Supabase and role-based authentication.",
-    tags: [ "supabase", "flutter", "native development"],
-    repoLink: "https://github.com/lcs-cohort-17/FuturePath-Employment-Hub/tree/phoenix/qa-uiux/sprint2-navmerge",
-    liveLink: AppRecord,
-    images: [
-      { 
-        src: AppRecord,
-        type: "video",
-        description: "FuturePath app recording - Job opportunities, courses, and role-based access in the Flutter app."
-      }
-    ]
-  },
+  
   {
     id: 3,
     title: "Oracle APEX Data Analysis",
