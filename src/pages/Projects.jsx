@@ -16,6 +16,21 @@ import AppRecord from '../assets/AppRecord.mp4'
 import goVideo from '../assets/go.mp4'
 
 const projects = [
+    {
+    id: 4,
+    title: "Go Card",
+    description: "A Flutter NFC app that lets Golden Arrow commuters load trips onto their GA clip card directly from their phone, reducing kiosk queues and making transit top-ups faster and easier.",
+    tags: ["Flutter", "NFC", "Mobile", "Transit"],
+    repoLink: "https://github.com/FernandezMische/card_loader",
+    liveLink: goVideo,
+    images: [
+      {
+        src: goVideo,
+        type: "video",
+        description: "Go Card app recording - NFC mobile-to-card interaction for loading transit trips onto a GA clip card."
+      }
+    ]
+  }
   
   {
     id: 2,
@@ -71,21 +86,7 @@ const projects = [
     ]
   },
 
-  {
-    id: 4,
-    title: "Go Card",
-    description: "A Flutter NFC app that lets Golden Arrow commuters load trips onto their GA clip card directly from their phone, reducing kiosk queues and making transit top-ups faster and easier.",
-    tags: ["Flutter", "NFC", "Mobile", "Transit"],
-    repoLink: "https://github.com/FernandezMische/card_loader",
-    liveLink: goVideo,
-    images: [
-      {
-        src: goVideo,
-        type: "video",
-        description: "Go Card app recording - NFC mobile-to-card interaction for loading transit trips onto a GA clip card."
-      }
-    ]
-  }
+
 ]
 
 function Projects() {
