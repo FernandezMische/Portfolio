@@ -30,7 +30,7 @@ const projects = [
         description: "Go Card app recording - NFC mobile-to-card interaction for loading transit trips onto a GA clip card."
       }
     ]
-  }
+  },
   
   {
     id: 2,
