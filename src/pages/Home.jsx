@@ -14,7 +14,7 @@ function Home() {
         Cape Town, South Africa
       </p>
       <p className="text-white/70 text-base md:text-xl mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
-        Results-driven full-stack developer specializing in backend development, authentication systems, and payment integration. Building scalable web applications and RESTful APIs.
+       Aspiring software developer, natural leader, and independent worker with a strong passion for technical problem‑solving. Experienced in full‑stack web and mobile development in agile environments.
       </p>
       
       {/* Contact Info Quick Links */}

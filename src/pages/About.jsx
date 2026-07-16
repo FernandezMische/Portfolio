@@ -63,22 +63,7 @@ function About() {
 
         {/* Right Column - Skills & Education */}
         <div className="space-y-5">
-          <div className="bg-[#1F1F2E] rounded-xl p-5 border border-white/10">
-            <h3 className="text-purple-400 text-lg font-semibold mb-3">Tech Stack</h3>
-            <div className="flex flex-wrap gap-2">
-              <span className="tech-pill text-xs">Vue.js</span>
-              <span className="tech-pill text-xs">React</span>
-              <span className="tech-pill text-xs">Node.js</span>
-              <span className="tech-pill text-xs">Express</span>
-              <span className="tech-pill text-xs">MySQL</span>
-              <span className="tech-pill text-xs">Supabase</span>
-              <span className="tech-pill text-xs">Firebase</span>
-              <span className="tech-pill text-xs">PHP</span>
-              <span className="tech-pill text-xs">Tailwind</span>
-              <span className="tech-pill text-xs">Flutter</span>
-              <span className="tech-pill text-xs">Git</span>
-            </div>
-          </div>
+          
 
           <div className="bg-[#1F1F2E] rounded-xl p-5 border border-white/10">
             <h3 className="text-purple-400 text-lg font-semibold mb-3">Certifications & Education</h3>
