@@ -27,7 +27,7 @@ const projects = [
       {
         src: goVideo,
         type: "video",
-        description: "Go Card app recording - NFC mobile-to-card interaction for loading transit trips onto a GA clip card."
+        description: "NFC mobile-to-card interaction for loading transit trips onto a GA clip card."
       }
     ]
   },
