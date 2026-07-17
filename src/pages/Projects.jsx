@@ -207,9 +207,10 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                   className="w-full h-56 sm:h-64 md:h-80 object-cover cursor-pointer"
                   onClick={handleImageTap}
                   autoPlay
-                  muted={project.title === 'Go Card'}
+                  muted
                   loop
                   playsInline
+                  preload="metadata"
                 />
               ) : (
                 <img 
