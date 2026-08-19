@@ -4,10 +4,10 @@ import profileImg from '../assets/MyProfile.png'
 function About() {
   // Function to handle CV download
   const handleDownloadCV = () => {
-    const pdfUrl = '/MISCHE FERNANDEZ CV.pdf'
+    const pdfUrl = '/Mische Fernandez CV (2).pdf'
     const link = document.createElement('a')
     link.href = pdfUrl
-    link.download = 'MISCHE FERNANDEZ CV.pdf'
+    link.download = 'Mische Fernandez CV (2).pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
