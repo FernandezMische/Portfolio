@@ -119,7 +119,7 @@ function Contact() {
         </Reveal>
         
         {/* Right Column - Connect with me */}
-        <Reveal delay={120} className="bg-[var(--color-secondary)] p-7 md:p-10 text-[#f8f6f0] self-start">
+        <Reveal delay={120} className="contact-panel p-7 md:p-10 self-start">
           <p className="section-kicker mb-4 text-[var(--color-primary)]">Find me here</p>
           <h3 className="display-font text-3xl md:text-4xl font-bold mb-8">Connect with me</h3>
           <div className="space-y-5">
