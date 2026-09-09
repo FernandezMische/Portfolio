@@ -7,7 +7,7 @@ function Home() {
       <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
         Mische Fernandez
       </h1>
-      <p className="text-purple-400 text-xl md:text-2xl font-semibold mb-3">
+      <p className="text-[var(--color-primary)] text-xl md:text-2xl font-semibold mb-3">
         Full-Stack Developer
       </p>
       <p className="text-white/60 text-base md:text-lg mb-6">

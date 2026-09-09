@@ -149,7 +149,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
   const hasLiveDemo = project.liveLink && project.liveLink !== '#'
 
   return (
-    <div className={`py-8 md:py-16 ${!isEven ? 'bg-[#1F1F2E] -mx-4 md:-mx-8 px-4 md:px-8 rounded-xl' : ''}`}>
+    <div className={`py-8 md:py-16 ${!isEven ? 'bg-[var(--color-card)] -mx-4 md:-mx-8 px-4 md:px-8 rounded-xl' : ''}`}>
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center`}>
         <div className="flex-1">
           <h2 className="text-white text-2xl md:text-3xl font-bold mb-3 md:mb-4">{project.title}</h2>
@@ -228,13 +228,13 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
               <>
                 <button 
                   onClick={prevImage}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-[var(--color-secondary)] text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
                 >
                   â—€
                 </button>
                 <button 
                   onClick={nextImage}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-purple-500 text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-[var(--color-secondary)] text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
                 >
                   â–¶
                 </button>
@@ -249,7 +249,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                     onClick={() => goToImage(idx)}
                     className={`h-1.5 md:h-2 rounded-full transition-all ${
                       idx === currentImageIndex 
-                        ? 'bg-purple-400 w-4 md:w-6' 
+                        ? 'bg-[var(--color-primary)] w-4 md:w-6'
                         : 'bg-white/40 w-1.5 md:w-2 hover:bg-white/60'
                     }`}
                   />

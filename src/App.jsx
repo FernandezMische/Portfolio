@@ -59,7 +59,7 @@ const FloatingCode = () => {
 }
 
 function App() {
-  const [bgColor, setBgColor] = useState('#1A1A2E')
+  const [bgColor, setBgColor] = useState('#16231e')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -71,13 +71,13 @@ function App() {
       
       if (scrollPercent < 0.33) {
         const t = scrollPercent / 0.33
-        newColor = interpolateColor('#1A1A2E', '#2D2D5E', t)
+        newColor = interpolateColor('#16231e', '#274238', t)
       } else if (scrollPercent < 0.66) {
         const t = (scrollPercent - 0.33) / 0.33
-        newColor = interpolateColor('#2D2D5E', '#5B2C6F', t)
+        newColor = interpolateColor('#274238', '#496550', t)
       } else {
         const t = (scrollPercent - 0.66) / 0.34
-        newColor = interpolateColor('#5B2C6F', '#1A1A2E', t)
+        newColor = interpolateColor('#496550', '#16231e', t)
       }
       
       setBgColor(newColor)

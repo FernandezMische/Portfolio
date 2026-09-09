@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav className="sticky top-0 bg-black/40 backdrop-blur-md border-b border-white/10 z-50 px-4 md:px-8 py-3 md:py-4">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <a href="#home" className="text-white text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+        <a href="#home" className="text-white text-xl md:text-2xl font-bold text-[var(--color-primary)]">
           Mische Portfolio
         </a>
         
