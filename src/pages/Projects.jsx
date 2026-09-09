@@ -86,8 +86,14 @@ function Projects() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16">
-      <h1 className="text-white text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Projects</h1>
+    <div className="max-w-6xl mx-auto px-5 md:px-10 py-16 md:py-24">
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-14">
+        <div>
+          <p className="section-kicker mb-4">Selected work</p>
+          <h1 className="display-font text-[var(--color-secondary)] text-4xl md:text-6xl font-bold">Things I&apos;ve built.</h1>
+        </div>
+        <p className="text-[var(--color-text-muted)] text-sm max-w-xs leading-relaxed">A selection of web, mobile, and data projects built with thoughtful technology and real people in mind.</p>
+      </div>
       
       {projects.map((project, index) => (
         <ProjectSection 
@@ -149,11 +155,12 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
   const hasLiveDemo = project.liveLink && project.liveLink !== '#'
 
   return (
-    <div className={`py-8 md:py-16 ${!isEven ? 'bg-[var(--color-card)] -mx-4 md:-mx-8 px-4 md:px-8 rounded-xl' : ''}`}>
+    <div className={`py-10 md:py-16 border-t border-[#dfe5db] ${!isEven ? 'bg-[var(--color-card-alt)] -mx-5 md:-mx-10 px-5 md:px-10' : ''}`}>
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center`}>
         <div className="flex-1">
-          <h2 className="text-white text-2xl md:text-3xl font-bold mb-3 md:mb-4">{project.title}</h2>
-          <p className="text-white/70 mb-4 leading-relaxed text-sm md:text-base">{project.description}</p>
+          <p className="section-kicker mb-3">0{index + 1} / Project</p>
+          <h2 className="display-font text-[var(--color-secondary)] text-3xl md:text-4xl font-bold mb-4">{project.title}</h2>
+          <p className="text-[var(--color-text-muted)] mb-5 leading-relaxed text-sm md:text-base">{project.description}</p>
           <div className="flex flex-wrap gap-2 mb-6">
             {project.tags.map(tag => (
               <span key={tag} className="tech-pill text-xs md:text-sm">{tag}</span>
@@ -179,7 +186,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
         
         <div className="flex-1 w-full">
           <div 
-            className="relative bg-[#2D2D4A] rounded-xl overflow-hidden border border-white/15 shadow-lg"
+            className="relative bg-[var(--color-secondary)] overflow-hidden border border-[#c9d6c0] shadow-[10px_10px_0_#c8d5bf]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -204,7 +211,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                 />
               )}
               
-              <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
+              <div className="absolute inset-0 bg-[var(--color-secondary)]/10 pointer-events-none"></div>
               
               <div 
                 className={`
@@ -216,8 +223,8 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                   }
                 `}
               >
-                <div className="w-full h-full bg-black/70 backdrop-blur-sm rounded-lg flex items-center justify-center p-6 md:p-8">
-                  <p className="text-white text-sm md:text-base font-medium leading-relaxed">
+                <div className="w-full h-full bg-[var(--color-secondary)]/90 flex items-center justify-center p-6 md:p-8">
+                  <p className="text-[#f8f6f0] text-sm md:text-base font-medium leading-relaxed">
                     {project.images[currentImageIndex].description}
                   </p>
                 </div>
@@ -228,15 +235,15 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
               <>
                 <button 
                   onClick={prevImage}
-                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-[var(--color-secondary)] text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-[var(--color-secondary)]/80 hover:bg-[var(--color-accent)] text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base z-10"
                 >
-                  â—€
+                  &lsaquo;
                 </button>
                 <button 
                   onClick={nextImage}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-[var(--color-secondary)] text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base backdrop-blur-sm z-10"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-[var(--color-secondary)]/80 hover:bg-[var(--color-accent)] text-white rounded-full w-8 h-8 md:w-10 md:h-10 flex items-center justify-center transition-all text-sm md:text-base z-10"
                 >
-                  â–¶
+                  &rsaquo;
                 </button>
               </>
             )}

@@ -49,20 +49,22 @@ function Contact() {
   }
 
   return (
-    <div className="max-w-6xl mx-auto px-4 md:px-8 py-12 md:py-24">
-      <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+    <div className="max-w-6xl mx-auto px-5 md:px-10 py-16 md:py-24">
+      <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-20">
         {/* Left Column - Contact Form */}
         <div className="flex-1">
-          <h1 className="text-white text-3xl md:text-4xl font-bold mb-4 md:mb-6">Contact Me</h1>
+          <p className="section-kicker mb-4">Start a conversation</p>
+          <h1 className="display-font text-[var(--color-secondary)] text-4xl md:text-6xl font-bold leading-tight mb-5">Have a good<br /><span className="text-[var(--color-accent)]">idea?</span></h1>
+          <p className="text-[var(--color-text-muted)] leading-relaxed mb-8 max-w-sm">Tell me what you are building, what is not working, or what you would like to explore together.</p>
           
           {submitStatus === 'success' && (
-            <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg mb-6 text-sm">
+            <div className="bg-[var(--color-card-alt)] border border-[var(--color-primary)] text-[var(--color-secondary)] px-4 py-3 mb-6 text-sm">
               ✓ Message sent successfully! I'll get back to you soon.
             </div>
           )}
           
           {submitStatus === 'error' && (
-            <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6 text-sm">
+            <div className="bg-[#f5dfd7] border border-[var(--color-accent)] text-[#934d3c] px-4 py-3 mb-6 text-sm">
               ✗ Something went wrong. Please try again or email me directly.
             </div>
           )}
@@ -78,7 +80,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your Name"
               required
-              className="p-3 md:p-4 border border-white/20 rounded-lg bg-[var(--color-card)] text-white placeholder-white/50 focus:outline-none focus:border-[var(--color-primary)] transition-colors text-sm md:text-base"
+              className="p-3 md:p-4 border border-[#cbd5ca] bg-white text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base"
             />
             <input 
               type="email" 
@@ -87,7 +89,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your Email"
               required
-              className="p-3 md:p-4 border border-white/20 rounded-lg bg-[var(--color-card)] text-white placeholder-white/50 focus:outline-none focus:border-[var(--color-primary)] transition-colors text-sm md:text-base"
+              className="p-3 md:p-4 border border-[#cbd5ca] bg-white text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base"
             />
             <textarea 
               name="message"
@@ -96,7 +98,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your Message"
               required
-              className="p-3 md:p-4 border border-white/20 rounded-lg bg-[var(--color-card)] text-white placeholder-white/50 focus:outline-none focus:border-[var(--color-primary)] transition-colors text-sm md:text-base resize-none"
+              className="p-3 md:p-4 border border-[#cbd5ca] bg-white text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base resize-none"
             ></textarea>
             
             {/* Hidden fields for FormSubmit.co */}
@@ -116,20 +118,21 @@ function Contact() {
         </div>
         
         {/* Right Column - Connect with me */}
-        <div className="flex-1">
-          <h3 className="text-white text-xl md:text-2xl font-semibold mb-3 md:mb-4">Connect with me</h3>
-          <div className="space-y-3 md:space-y-4">
-            <p className="text-white/70 text-sm md:text-base break-all">
+        <div className="bg-[var(--color-secondary)] p-7 md:p-10 text-[#f8f6f0] self-start">
+          <p className="section-kicker mb-4 text-[var(--color-primary)]">Find me here</p>
+          <h3 className="display-font text-3xl md:text-4xl font-bold mb-8">Connect with me</h3>
+          <div className="space-y-5">
+            <p className="text-[#dce8d4] text-sm md:text-base break-all">
               📧 chefernandez448@gmail.com
             </p>
-            <p className="text-white/70 text-sm md:text-base break-all">
+            <p className="text-[#dce8d4] text-sm md:text-base break-all">
               📞 +27 66 421 3810
             </p>
             <a 
               href="https://www.linkedin.com/in/mische-fernandez-046006294/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="block text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors text-sm md:text-base break-all"
+              className="block text-[var(--color-primary)] hover:text-white transition-colors text-sm md:text-base break-all"
             >
               🔗 LinkedIn: linkedin.com/in/mische-fernandez-046006294/
             </a>
@@ -137,7 +140,7 @@ function Contact() {
               href="https://github.com/FernandezMische" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="block text-[var(--color-primary)] hover:text-[var(--color-accent)] transition-colors text-sm md:text-base break-all"
+              className="block text-[var(--color-primary)] hover:text-white transition-colors text-sm md:text-base break-all"
             >
               🐙 GitHub: github.com/FernandezMische
             </a>
