@@ -3,8 +3,8 @@
 
 @theme {
   --color-primary: #9caf88;
-  --color-secondary: #3f5b4b;
-  --color-accent: #c8755b;
+  --color-secondary: #29483c;
+  --color-accent: #557568;
   --color-text: #20332b;
   --color-text-muted: #68756b;
   --color-card: #f5f1e8;
@@ -23,7 +23,7 @@
   }
 
   body {
-    background: #f8f6f0;
+    background: var(--page-bg);
     color: var(--color-text);
     font-family: 'DM Sans', 'Trebuchet MS', sans-serif;
     min-height: 100vh;
@@ -84,63 +84,86 @@
 
 .site-shell {
   min-height: 100vh;
-  background: #f8f6f0;
+  background: var(--page-bg);
+  --page-bg: #f8f6f0;
+  --section-bg: #e5eddc;
+  --nav-bg: rgba(248, 246, 240, 0.95);
+  --input-bg: #ffffff;
+  --on-dark: #f8f6f0;
+  --hero-bg: #29483c;
+  --hero-star: #dce8d4;
+  --border-color: #dfe5db;
 }
 
 .section-sage {
-  background: #e5eddc;
+  background: var(--section-bg);
 }
 
 .hero-art {
   position: relative;
-  min-height: 17rem;
+  min-height: 25rem;
   overflow: hidden;
-  background: #e5eddc;
-  border: 1px solid #c8d5bf;
+  background: var(--hero-bg);
+  border: 1px solid var(--color-secondary);
+  box-shadow: 12px 12px 0 var(--color-primary);
 }
 
-.hero-orbit {
+.space-stars {
   position: absolute;
-  width: 13rem;
-  height: 13rem;
-  border: 1px solid var(--color-primary);
+  inset: 0;
+  background-image: radial-gradient(circle, var(--hero-star) 1px, transparent 1.5px);
+  background-size: 48px 48px;
+  opacity: 0.5;
+}
+
+.space-stars-one {
+  animation: starDrift 18s linear infinite;
+}
+
+.space-stars-two {
+  background-size: 83px 83px;
+  background-position: 21px 14px;
+  opacity: 0.3;
+  animation: starDrift 24s linear infinite reverse;
+}
+
+.space-halo {
+  position: absolute;
+  width: 18rem;
+  height: 18rem;
+  border: 1px solid rgba(156, 175, 136, 0.6);
   border-radius: 50%;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 60px rgba(156, 175, 136, 0.18);
+  animation: haloBreath 6s ease-in-out infinite;
 }
 
-.hero-orbit-one {
-  animation: orbitDrift 8s ease-in-out infinite;
-}
-
-.hero-orbit-two {
-  width: 8rem;
-  height: 19rem;
-  border-color: var(--color-accent);
-  transform: translate(-50%, -50%) rotate(38deg);
-  animation: orbitTilt 9s ease-in-out infinite;
-}
-
-.hero-spark {
+.space-moon {
   position: absolute;
-  width: 0.6rem;
-  height: 0.6rem;
-  background: var(--color-accent);
-  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
   left: 50%;
   top: 50%;
-  box-shadow: 0 0 0 0.5rem rgba(200, 117, 91, 0.13);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, #dce8d4 0 8%, #a8bd9c 45%, #718d78 100%);
+  box-shadow: -18px -12px 0 rgba(220, 232, 212, 0.08), 0 0 45px rgba(220, 232, 212, 0.3);
+  animation: moonFloat 7s ease-in-out infinite;
 }
 
-.hero-spark-one {
-  animation: sparkMove 5s ease-in-out infinite;
+.moon-crater {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  background: rgba(63, 91, 75, 0.25);
+  box-shadow: inset 3px 3px 4px rgba(41, 72, 60, 0.2);
 }
 
-.hero-spark-two {
-  background: var(--color-secondary);
-  animation: sparkMoveTwo 6s ease-in-out infinite;
-}
+.moon-crater-one { width: 1.4rem; height: 1.4rem; left: 27%; top: 24%; }
+.moon-crater-two { width: 2.2rem; height: 2.2rem; right: 18%; top: 48%; }
+.moon-crater-three { width: 1rem; height: 1rem; left: 42%; bottom: 18%; }
 
 .hero-art-label {
   position: absolute;
@@ -153,24 +176,19 @@
   text-transform: uppercase;
 }
 
-@keyframes orbitDrift {
-  0%, 100% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
-  50% { transform: translate(-50%, -50%) rotate(14deg) scale(1.05); }
+@keyframes starDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(48px); }
 }
 
-@keyframes orbitTilt {
-  0%, 100% { transform: translate(-50%, -50%) rotate(38deg); }
-  50% { transform: translate(-50%, -50%) rotate(58deg); }
+@keyframes haloBreath {
+  0%, 100% { transform: translate(-50%, -50%) scale(0.96); opacity: 0.65; }
+  50% { transform: translate(-50%, -50%) scale(1.04); opacity: 1; }
 }
 
-@keyframes sparkMove {
-  0%, 100% { transform: translate(-5.5rem, -5.5rem); }
-  50% { transform: translate(5rem, 4rem); }
-}
-
-@keyframes sparkMoveTwo {
-  0%, 100% { transform: translate(6rem, -3rem); }
-  50% { transform: translate(-4rem, 5rem); }
+@keyframes moonFloat {
+  0%, 100% { transform: translate(-50%, -50%) translateY(0); }
+  50% { transform: translate(-50%, -50%) translateY(-8px); }
 }
 
 .display-font {
@@ -215,10 +233,60 @@
     transition: none;
   }
 
-  .hero-orbit,
-  .hero-spark {
+  .space-stars,
+  .space-halo,
+  .space-moon {
     animation: none;
   }
+}
+
+.site-nav {
+  background: var(--nav-bg);
+  border-color: var(--border-color);
+}
+
+.theme-toggle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-secondary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--color-primary);
+  transform: rotate(12deg);
+}
+
+.dark-mode {
+  --page-bg: #14251f;
+  --section-bg: #1d382d;
+  --nav-bg: rgba(20, 37, 31, 0.95);
+  --input-bg: #20392f;
+  --on-dark: #edf1e8;
+  --hero-bg: #0f211b;
+  --hero-star: #b8d0b0;
+  --border-color: #315344;
+  --color-secondary: #dce8d4;
+  --color-text: #edf1e8;
+  --color-text-muted: #b8c7bb;
+  --color-card: #20392f;
+  --color-card-alt: #29483c;
+  color: var(--color-text);
+}
+
+.dark-mode .btn-primary {
+  color: #14251f;
+  background: var(--color-primary);
+}
+
+.dark-mode .btn-primary:hover {
+  background: var(--color-accent);
+  color: #edf1e8;
 }
 
 .site-footer {
@@ -244,17 +312,7 @@
 
 @media (max-width: 640px) {
   .hero-art {
-    min-height: 13rem;
-  }
-
-  .hero-orbit {
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .hero-orbit-two {
-    width: 6rem;
-    height: 15rem;
+    min-height: 19rem;
   }
 
   .site-footer {

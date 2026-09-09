@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import About from './pages/About'
@@ -6,9 +6,17 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem('portfolio-theme') === 'dark'
+  })
+
+  useEffect(() => {
+    localStorage.setItem('portfolio-theme', isDarkMode ? 'dark' : 'light')
+  }, [isDarkMode])
+
   return (
-    <div className="site-shell">
-        <Navbar />
+    <div className={`site-shell ${isDarkMode ? 'dark-mode' : ''}`}>
+        <Navbar isDarkMode={isDarkMode} onThemeToggle={() => setIsDarkMode((current) => !current)} />
         <main>
           <section id="home" className="scroll-mt-24">
             <Home />

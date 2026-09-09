@@ -19,11 +19,15 @@ function Home() {
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">
-          <div className="hero-orbit hero-orbit-one"></div>
-          <div className="hero-orbit hero-orbit-two"></div>
-          <div className="hero-spark hero-spark-one"></div>
-          <div className="hero-spark hero-spark-two"></div>
-          <div className="hero-art-label">Mische / 2026</div>
+          <div className="space-stars space-stars-one"></div>
+          <div className="space-stars space-stars-two"></div>
+          <div className="space-halo"></div>
+          <div className="space-moon">
+            <span className="moon-crater moon-crater-one"></span>
+            <span className="moon-crater moon-crater-two"></span>
+            <span className="moon-crater moon-crater-three"></span>
+          </div>
+          <div className="hero-art-label">Explore / 2026</div>
         </div>
         <div className="border-t border-[var(--color-primary)] pt-5 lg:mb-2">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">A curious builder with a passion for technical problem-solving, clean interfaces, and collaborative work.</p>

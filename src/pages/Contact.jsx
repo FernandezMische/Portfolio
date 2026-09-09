@@ -81,7 +81,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your Name"
               required
-              className="p-3 md:p-4 border border-[#cbd5ca] bg-white text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base"
+              className="p-3 md:p-4 border border-[#cbd5ca] bg-[var(--input-bg)] text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base"
             />
             <input 
               type="email" 
@@ -90,7 +90,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your Email"
               required
-              className="p-3 md:p-4 border border-[#cbd5ca] bg-white text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base"
+              className="p-3 md:p-4 border border-[#cbd5ca] bg-[var(--input-bg)] text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base"
             />
             <textarea 
               name="message"
@@ -99,7 +99,7 @@ function Contact() {
               onChange={handleChange}
               placeholder="Your Message"
               required
-              className="p-3 md:p-4 border border-[#cbd5ca] bg-white text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base resize-none"
+              className="p-3 md:p-4 border border-[#cbd5ca] bg-[var(--input-bg)] text-[var(--color-text)] placeholder-[#9ba79b] focus:outline-none focus:border-[var(--color-secondary)] transition-colors text-sm md:text-base resize-none"
             ></textarea>
             
             {/* Hidden fields for FormSubmit.co */}

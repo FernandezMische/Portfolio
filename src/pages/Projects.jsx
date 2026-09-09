@@ -259,7 +259,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                     className={`h-1.5 md:h-2 rounded-full transition-all ${
                       idx === currentImageIndex 
                         ? 'bg-[var(--color-primary)] w-4 md:w-6'
-                        : 'bg-white/40 w-1.5 md:w-2 hover:bg-white/60'
+                        : 'bg-[var(--hero-star)]/40 w-1.5 md:w-2 hover:bg-[var(--hero-star)]/60'
                     }`}
                   />
                 ))}
