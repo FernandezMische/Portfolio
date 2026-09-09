@@ -18,6 +18,13 @@ function Home() {
             <a href="#contact" className="btn-secondary">Let&apos;s talk</a>
           </div>
         </div>
+        <div className="hero-art" aria-hidden="true">
+          <div className="hero-orbit hero-orbit-one"></div>
+          <div className="hero-orbit hero-orbit-two"></div>
+          <div className="hero-spark hero-spark-one"></div>
+          <div className="hero-spark hero-spark-two"></div>
+          <div className="hero-art-label">Mische / 2026</div>
+        </div>
         <div className="border-t border-[var(--color-primary)] pt-5 lg:mb-2">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">A curious builder with a passion for technical problem-solving, clean interfaces, and collaborative work.</p>
           <div className="grid grid-cols-2 gap-4 text-sm">

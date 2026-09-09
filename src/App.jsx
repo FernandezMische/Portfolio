@@ -13,18 +13,18 @@ function App() {
           <section id="home" className="scroll-mt-24">
             <Home />
           </section>
-          <section id="about" className="scroll-mt-24">
+          <section id="about" className="scroll-mt-24 section-sage">
             <About />
           </section>
           <section id="projects" className="scroll-mt-24">
             <Projects />
           </section>
-          <section id="contact" className="scroll-mt-24">
+          <section id="contact" className="scroll-mt-24 section-sage">
             <Contact />
           </section>
         </main>
         <footer className="site-footer">
-          <p>© 2025 Mische Fernandez</p>
+          <p>© 2026 Mische Fernandez</p>
           <div className="footer-links">
             <a 
               href="https://www.linkedin.com/in/mische-fernandez-046006294/" 
