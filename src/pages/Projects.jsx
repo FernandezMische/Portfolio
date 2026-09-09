@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Reveal from '../components/Reveal'
 
 // Import your Township Eats screenshots
 import loginImg from '../assets/LoginPage.png'
@@ -90,7 +91,7 @@ function Projects() {
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 mb-14">
         <div>
           <p className="section-kicker mb-4">Selected work</p>
-          <h1 className="display-font text-[var(--color-secondary)] text-4xl md:text-6xl font-bold">Things I&apos;ve built.</h1>
+          <h1 className="display-font text-[var(--color-secondary)] text-4xl md:text-6xl font-bold">Selected work.</h1>
         </div>
         <p className="text-[var(--color-text-muted)] text-sm max-w-xs leading-relaxed">A selection of web, mobile, and data projects built with thoughtful technology and real people in mind.</p>
       </div>
@@ -155,7 +156,8 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
   const hasLiveDemo = project.liveLink && project.liveLink !== '#'
 
   return (
-    <div className={`py-10 md:py-16 border-t border-[#dfe5db] ${!isEven ? 'bg-[var(--color-card-alt)] -mx-5 md:-mx-10 px-5 md:px-10' : ''}`}>
+    <Reveal delay={index * 100}>
+      <div className={`py-10 md:py-16 border-t border-[#dfe5db] ${!isEven ? 'bg-[var(--color-card-alt)] -mx-5 md:-mx-10 px-5 md:px-10' : ''}`}>
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center`}>
         <div className="flex-1">
           <p className="section-kicker mb-3">0{index + 1} / Project</p>
@@ -266,7 +268,8 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </Reveal>
   )
 }
 

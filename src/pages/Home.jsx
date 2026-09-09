@@ -1,13 +1,14 @@
 import React from 'react'
+import Reveal from '../components/Reveal'
 
 function Home() {
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-10 py-16 md:py-28">
       <div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-12 lg:gap-20 items-end">
-        <div>
+        <div className="hero-load">
           <p className="section-kicker mb-5">Full-stack developer · Cape Town</p>
           <h1 className="display-font text-[var(--color-secondary)] text-5xl sm:text-6xl md:text-8xl leading-[0.95] font-bold mb-7">
-            Building useful<br /><span className="text-[var(--color-accent)]">things</span> with care.
+            Building thoughtful<br /><span className="text-[var(--color-accent)]">digital experiences.</span>
           </h1>
           <p className="text-[var(--color-text-muted)] text-base md:text-lg max-w-xl leading-relaxed mb-8">
             I am Mische Fernandez, a developer and team lead who turns thoughtful ideas into practical web and mobile experiences.
@@ -26,7 +27,7 @@ function Home() {
         </div>
       </div>
 
-      <div className="mt-24 pt-8 border-t border-[#dfe5db]">
+      <Reveal className="mt-24 pt-8 border-t border-[#dfe5db]">
         <div className="flex items-center justify-between mb-6">
           <h2 className="display-font text-[var(--color-secondary)] text-2xl md:text-3xl">Tools I work with</h2>
           <span className="text-[var(--color-text-muted)] text-xs uppercase tracking-widest">Selected stack</span>
@@ -47,7 +48,7 @@ function Home() {
           <span className="tech-pill">Flutter</span>
           <span className="tech-pill">Firebase</span>
         </div>
-      </div>
+      </Reveal>
     </div>
   )
 }

@@ -4,7 +4,7 @@ function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="sticky top-0 bg-[#f8f6f0]/95 backdrop-blur-md border-b border-[#dfe5db] z-50 px-5 md:px-10 py-4">
+    <nav className="sticky top-0 bg-[#edf1e8]/95 backdrop-blur-md border-b border-[#dfe5db] z-50 px-5 md:px-10 py-4">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <a href="#home" className="display-font text-[var(--color-secondary)] text-xl md:text-2xl font-bold">
           MF<span className="text-[var(--color-accent)]">.</span>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Reveal from '../components/Reveal'
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -52,10 +53,10 @@ function Contact() {
     <div className="max-w-6xl mx-auto px-5 md:px-10 py-16 md:py-24">
       <div className="grid md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-20">
         {/* Left Column - Contact Form */}
-        <div className="flex-1">
-          <p className="section-kicker mb-4">Start a conversation</p>
-          <h1 className="display-font text-[var(--color-secondary)] text-4xl md:text-6xl font-bold leading-tight mb-5">Have a good<br /><span className="text-[var(--color-accent)]">idea?</span></h1>
-          <p className="text-[var(--color-text-muted)] leading-relaxed mb-8 max-w-sm">Tell me what you are building, what is not working, or what you would like to explore together.</p>
+        <Reveal>
+          <p className="section-kicker mb-4">For prospective employers</p>
+          <h1 className="display-font text-[var(--color-secondary)] text-4xl md:text-6xl font-bold leading-tight mb-5">Let&apos;s<br /><span className="text-[var(--color-accent)]">connect.</span></h1>
+          <p className="text-[var(--color-text-muted)] leading-relaxed mb-8 max-w-sm">I&apos;m open to conversations about developer roles, internships, and teams doing meaningful work.</p>
           
           {submitStatus === 'success' && (
             <div className="bg-[var(--color-card-alt)] border border-[var(--color-primary)] text-[var(--color-secondary)] px-4 py-3 mb-6 text-sm">
@@ -115,10 +116,10 @@ function Contact() {
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
-        </div>
+        </Reveal>
         
         {/* Right Column - Connect with me */}
-        <div className="bg-[var(--color-secondary)] p-7 md:p-10 text-[#f8f6f0] self-start">
+        <Reveal delay={120} className="bg-[var(--color-secondary)] p-7 md:p-10 text-[#f8f6f0] self-start">
           <p className="section-kicker mb-4 text-[var(--color-primary)]">Find me here</p>
           <h3 className="display-font text-3xl md:text-4xl font-bold mb-8">Connect with me</h3>
           <div className="space-y-5">
@@ -145,7 +146,7 @@ function Contact() {
               🐙 GitHub: github.com/FernandezMische
             </a>
           </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   )
