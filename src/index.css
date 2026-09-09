@@ -29,6 +29,10 @@
     min-height: 100vh;
     overflow-x: hidden;
   }
+
+  .grid > * {
+    min-width: 0;
+  }
 }
 
 @layer components {
@@ -106,6 +110,8 @@
   min-height: 26rem;
   overflow: hidden;
   background: transparent;
+  --orbit-distance-one: 9rem;
+  --orbit-distance-two: 6rem;
 }
 
 .orbit-ring {
@@ -176,13 +182,13 @@
 }
 
 @keyframes ballOrbitOne {
-  from { transform: translate(-50%, -50%) rotate(0deg) translateX(9rem) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg) translateX(9rem) rotate(-360deg); }
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(var(--orbit-distance-one)) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg) translateX(var(--orbit-distance-one)) rotate(-360deg); }
 }
 
 @keyframes ballOrbitTwo {
-  from { transform: translate(-50%, -50%) rotate(0deg) translateX(6rem) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(-360deg) translateX(6rem) rotate(360deg); }
+  from { transform: translate(-50%, -50%) rotate(0deg) translateX(var(--orbit-distance-two)) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(-360deg) translateX(var(--orbit-distance-two)) rotate(360deg); }
 }
 
 .display-font {
@@ -236,6 +242,10 @@
 .site-nav {
   background: var(--nav-bg);
   border-color: var(--border-color);
+}
+
+.project-media {
+  transition: box-shadow 0.2s ease;
 }
 
 .theme-toggle {
@@ -312,7 +322,52 @@
 
 @media (max-width: 640px) {
   .hero-art {
-    min-height: 19rem;
+    min-height: 17rem;
+    margin: 0.5rem 0 1.5rem;
+    --orbit-distance-one: 5.7rem;
+    --orbit-distance-two: 3.8rem;
+  }
+
+  .orbit-ring {
+    width: 11.5rem;
+    height: 11.5rem;
+  }
+
+  .orbit-ring-two {
+    width: 8rem;
+    height: 16rem;
+  }
+
+  .orbit-ball-one {
+    width: 0.95rem;
+    height: 0.95rem;
+  }
+
+  .orbit-ball-two {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+
+  .orbit-ball-three {
+    width: 0.55rem;
+    height: 0.55rem;
+  }
+
+  .site-footer {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-media {
+    box-shadow: 5px 5px 0 #c8d5bf;
+  }
+
+  .section-sage > div,
+  #home > div,
+  #projects > div,
+  #contact > div {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 
   .site-footer {

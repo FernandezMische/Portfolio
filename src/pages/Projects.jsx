@@ -188,7 +188,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
         
         <div className="flex-1 w-full">
           <div 
-            className="relative bg-[var(--color-secondary)] overflow-hidden border border-[#c9d6c0] shadow-[10px_10px_0_#c8d5bf]"
+            className="project-media relative bg-[var(--color-secondary)] overflow-hidden border border-[#c9d6c0] shadow-[10px_10px_0_#c8d5bf]"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
