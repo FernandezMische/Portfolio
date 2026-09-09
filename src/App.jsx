@@ -7,7 +7,7 @@ import Contact from './pages/Contact'
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    return localStorage.getItem('portfolio-theme') === 'dark'
+    return localStorage.getItem('portfolio-theme') !== 'light'
   })
 
   useEffect(() => {

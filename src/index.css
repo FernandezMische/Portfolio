@@ -86,7 +86,7 @@
   min-height: 100vh;
   background: var(--page-bg);
   --page-bg: #f8f6f0;
-  --section-bg: #e5eddc;
+  --section-bg: #c7d5bf;
   --nav-bg: rgba(248, 246, 240, 0.95);
   --input-bg: #ffffff;
   --on-dark: #f8f6f0;
@@ -163,19 +163,6 @@
   top: 50%;
   background: var(--color-secondary);
   animation: ballOrbitOne 16s linear infinite reverse;
-}
-
-.hero-art-label {
-  left: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 1rem;
-  color: var(--color-secondary);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
 }
 
 @keyframes orbitTurn {

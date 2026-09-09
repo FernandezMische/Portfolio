@@ -24,7 +24,6 @@ function Home() {
           <div className="orbit-ball orbit-ball-one"></div>
           <div className="orbit-ball orbit-ball-two"></div>
           <div className="orbit-ball orbit-ball-three"></div>
-          <div className="hero-art-label">Explore / 2026</div>
         </div>
         <div className="border-t border-[var(--color-primary)] pt-5 lg:mb-2">
           <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">A curious builder with a passion for technical problem-solving, clean interfaces, and collaborative work.</p>
