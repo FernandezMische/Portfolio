@@ -11,12 +11,40 @@ import payfastImg from '../assets/PaymentPayfast.png'
 // import leaveApplicationsImg from '../assets/leaveApplications.png'
 // import leaveReqPageImg from '../assets/leaveReqPage.png'
 
-// Import your Oracle APEX screenshot
-import oracleApexImg from '../assets/oracleApex.png'
 import goVideo from '../assets/go.mp4'
+import lcStudioImg from '../assets/Lc Studio.png'
+import luminaImg from '../assets/lumina.png'
 
 const projects = [
-    {
+  {
+    id: 5,
+    title: "LC Studio",
+    description: "LC Studio is a YouthCode talent incubator where graduates build job-ready experience through real-world, workplace-integrated projects. I worked on the PHP and SQL backend, including admin authentication and a CMS-style admin management system that lets authorised users add new admin accounts without changing code. The account-creation styling was handled by another contributor.",
+    tags: ["PHP", "SQL", "FileZilla", "Authentication", "CMS"],
+    repoLink: "#",
+    liveLink: "https://lcstudio.co.za/",
+    images: [
+      {
+        src: lcStudioImg,
+        description: "LC Studio, a YouthCode talent incubator for workplace-integrated learning and real-world software delivery."
+      }
+    ]
+  },
+  {
+    id: 6,
+    title: "Lumina",
+    description: "Performed quality assurance testing on the admin side of the Lumina application. I executed structured manual tests to validate functionality and performance against design specifications, wrote and maintained test cases for functional requirements, regression edge cases, and user workflows, and logged defects using standard QA ticketing practices.",
+    tags: ["Manual Testing", "Quality Assurance", "Test Cases", "Regression Testing", "Defect Tracking"],
+    repoLink: "#",
+    liveLink: "https://lumina.siriusdream.co.za/",
+    images: [
+      {
+        src: luminaImg,
+        description: "Lumina admin application, where functionality, workflows, and regression cases were manually tested."
+      }
+    ]
+  },
+  {
     id: 4,
     title: "Go Card",
     description: "A Flutter NFC app that lets Golden Arrow commuters load trips onto their GA clip card directly from their phone, reducing kiosk queues and making transit top-ups faster and easier.",
@@ -54,22 +82,6 @@ const projects = [
       }
     ]
   },
-
-  {
-    id: 3,
-    title: "Oracle APEX Data Analysis",
-    description: "Data analysis and visualization project on OT enterprise systems using Oracle APEX. I performed comprehensive analysis and created interactive visualizations to provide insights into enterprise operations.",
-    tags: ["Oracle APEX", "SQL", "Data Analysis", "Data Visualization", "OT Enterprise Systems"],
-    repoLink: "#",
-    liveLink: "https://www.loom.com/share/ca839763ca27402aaa0731a8d7626e90",
-    images: [
-      { 
-        src: oracleApexImg,
-        description: "Oracle APEX dashboard - Data analysis and visualizations on OT enterprise systems showing key metrics, trends, and operational insights." 
-      }
-    ]
-  },
-
 
 ]
 

@@ -19,6 +19,13 @@ function Home() {
           </div>
         </div>
         <div className="hero-art" aria-hidden="true">
+          <div className="hero-code-stars">
+            <span className="code-star code-star-one">{'{ }'}</span>
+            <span className="code-star code-star-two">&lt;/&gt;</span>
+            <span className="code-star code-star-three">*</span>
+            <span className="code-star code-star-four">( )</span>
+            <span className="code-star code-star-five">;</span>
+          </div>
           <div className="orbit-ring orbit-ring-one"></div>
           <div className="orbit-ring orbit-ring-two"></div>
           <div className="orbit-ball orbit-ball-one"></div>

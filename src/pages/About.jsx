@@ -5,10 +5,10 @@ import Reveal from '../components/Reveal'
 function About() {
   // Function to handle CV download
   const handleDownloadCV = () => {
-    const pdfUrl = '/Mische Fernandez CV (2).pdf'
+    const pdfUrl = '/Mische Fernandez CV v2.pdf'
     const link = document.createElement('a')
     link.href = pdfUrl
-    link.download = 'Mische Fernandez CV (2).pdf'
+    link.download = 'Mische Fernandez CV v2.pdf'
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
