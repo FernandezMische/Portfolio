@@ -19,7 +19,7 @@ const projects = [
   {
     id: 5,
     title: "LC Studio",
-    description: "LC Studio is a YouthCode talent incubator where graduates build job-ready experience through real-world, workplace-integrated projects. I worked on the PHP and SQL backend, including admin authentication and a CMS-style admin management system that lets authorised users add new admin accounts without changing code. The account-creation styling was handled by another contributor.",
+    description: "LC Studio is a YouthCode talent incubator where graduates build job-ready experience through real-world, workplace-integrated projects. I developed the PHP and SQL backend, implementing secure admin authentication and a CMS-style admin management system. This system empowers authorized users to create and manage new admin accounts with zero code interaction, utilizing secure backend password hashing to protect user credentials automatically.",
     tags: ["PHP", "SQL", "FileZilla", "Authentication", "CMS"],
     repoLink: "#",
     liveLink: "https://lcstudio.co.za/",
