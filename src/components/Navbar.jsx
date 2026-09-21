@@ -11,7 +11,7 @@ function Navbar({ isDarkMode, onThemeToggle }) {
         </a>
         
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 lg:gap-8 text-sm font-bold text-[var(--color-text-muted)]">
+        <ul className="nav-links hidden md:flex gap-1 text-sm font-bold text-[var(--color-text-muted)]">
           <li><a href="#home" className="nav-link hover:text-[var(--color-secondary)]">Home</a></li>
           <li><a href="#about" className="nav-link hover:text-[var(--color-secondary)]">About</a></li>
           <li><a href="#projects" className="nav-link hover:text-[var(--color-secondary)]">Projects</a></li>

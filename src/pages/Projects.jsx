@@ -23,6 +23,7 @@ const projects = [
     tags: ["PHP", "SQL", "FileZilla", "Authentication", "CMS"],
     repoLink: "#",
     liveLink: "https://lcstudio.co.za/",
+    imagePosition: "left center",
     images: [
       {
         src: lcStudioImg,
@@ -37,6 +38,7 @@ const projects = [
     tags: ["Manual Testing", "Quality Assurance", "Test Cases", "Regression Testing", "Defect Tracking"],
     repoLink: "#",
     liveLink: "https://lumina.siriusdream.co.za/",
+    imagePosition: "45% center",
     images: [
       {
         src: luminaImg,
@@ -221,6 +223,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                   src={project.images[currentImageIndex].src}
                   alt={project.images[currentImageIndex].description}
                   className="w-full h-56 sm:h-64 md:h-80 object-cover cursor-pointer"
+                  style={{ objectPosition: project.imagePosition || 'center' }}
                   onClick={handleImageTap}
                 />
               )}
@@ -238,7 +241,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
                 `}
               >
                 <div className="w-full h-full bg-[var(--color-secondary)]/90 flex items-center justify-center p-6 md:p-8">
-                  <p className="text-[#f8f6f0] text-sm md:text-base font-medium leading-relaxed">
+                  <p className="project-overlay-text text-[#f8f6f0] text-sm md:text-base font-medium leading-relaxed">
                     {project.images[currentImageIndex].description}
                   </p>
                 </div>

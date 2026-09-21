@@ -3,11 +3,11 @@ import Reveal from '../components/Reveal'
 
 function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-5 md:px-10 py-16 md:py-28">
+    <div className="max-w-6xl mx-auto px-5 md:px-10 py-10 md:py-16">
       <div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-12 lg:gap-20 items-end">
         <div className="hero-load">
           <p className="section-kicker mb-5">Full-stack developer · Cape Town</p>
-          <h1 className="display-font text-[var(--color-secondary)] text-5xl sm:text-6xl md:text-8xl leading-[0.95] font-bold mb-7">
+          <h1 className="display-font text-[var(--color-secondary)] text-5xl sm:text-6xl md:text-7xl leading-[0.95] font-bold mb-7">
             Building thoughtful<br /><span className="text-[var(--color-accent)]">digital experiences.</span>
           </h1>
           <p className="text-[var(--color-text-muted)] text-base md:text-lg max-w-xl leading-relaxed mb-8">
