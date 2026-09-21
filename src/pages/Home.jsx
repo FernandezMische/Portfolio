@@ -33,7 +33,7 @@ function Home() {
           <div className="orbit-ball orbit-ball-three"></div>
         </div>
         <div className="border-t border-[var(--color-primary)] pt-5 lg:mb-2">
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">A curious builder with a passion for technical problem-solving, clean interfaces, and collaborative work.</p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">I am because we are.</p>
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div><p className="text-[var(--color-accent)] font-bold">01</p><p className="text-[var(--color-secondary)] font-bold">Web development</p></div>
             <div><p className="text-[var(--color-accent)] font-bold">02</p><p className="text-[var(--color-secondary)] font-bold">Mobile experiences</p></div>

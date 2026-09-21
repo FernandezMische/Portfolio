@@ -11,7 +11,7 @@ function Navbar({ isDarkMode, onThemeToggle }) {
         </a>
         
         {/* Desktop Menu */}
-        <ul className="nav-links hidden md:flex gap-1 text-sm font-bold text-[var(--color-text-muted)]">
+        <ul className="hidden md:flex gap-6 lg:gap-8 text-sm font-bold text-[var(--color-text-muted)]">
           <li><a href="#home" className="nav-link hover:text-[var(--color-secondary)]">Home</a></li>
           <li><a href="#about" className="nav-link hover:text-[var(--color-secondary)]">About</a></li>
           <li><a href="#projects" className="nav-link hover:text-[var(--color-secondary)]">Projects</a></li>
@@ -30,7 +30,7 @@ function Navbar({ isDarkMode, onThemeToggle }) {
           <span aria-hidden="true">{isDarkMode ? '☼' : '◐'}</span>
         </button>
         <button 
-          className="md:hidden text-[var(--color-secondary)] focus:outline-none"
+          className="md:hidden -mr-2 p-2 text-[var(--color-secondary)] focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
           aria-expanded={isOpen}
@@ -50,10 +50,10 @@ function Navbar({ isDarkMode, onThemeToggle }) {
       {isOpen && (
         <div className="md:hidden mt-3 pt-3 border-t border-[#dfe5db]">
           <ul className="flex flex-col gap-3 pb-2 text-sm font-bold text-[var(--color-text-muted)]">
-            <li><a href="#home" className="block hover:text-[var(--color-secondary)] transition-colors py-1" onClick={() => setIsOpen(false)}>Home</a></li>
-            <li><a href="#about" className="block hover:text-[var(--color-secondary)] transition-colors py-1" onClick={() => setIsOpen(false)}>About</a></li>
-            <li><a href="#projects" className="block hover:text-[var(--color-secondary)] transition-colors py-1" onClick={() => setIsOpen(false)}>Projects</a></li>
-            <li><a href="#contact" className="block hover:text-[var(--color-secondary)] transition-colors py-1" onClick={() => setIsOpen(false)}>Contact</a></li>
+            <li><a href="#home" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Home</a></li>
+            <li><a href="#about" className="mobile-nav-link" onClick={() => setIsOpen(false)}>About</a></li>
+            <li><a href="#projects" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Projects</a></li>
+            <li><a href="#contact" className="mobile-nav-link" onClick={() => setIsOpen(false)}>Contact</a></li>
           
           </ul>
         </div>
