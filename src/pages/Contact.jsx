@@ -130,12 +130,12 @@ function Contact() {
               📞 +27 66 421 3810
             </p>
             <a 
-              href="https://www.linkedin.com/in/mische-fernandez-046006294/" 
+              href="https://www.linkedin.com/in/misch%C3%A9-fernandez-42a63035b/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="block text-[var(--color-primary)] hover:text-white transition-colors text-sm md:text-base break-all"
             >
-              🔗 LinkedIn: linkedin.com/in/mische-fernandez-046006294/
+              🔗 LinkedIn: linkedin.com/in/misché-fernandez-42a63035b/
             </a>
             <a 
               href="https://github.com/FernandezMische" 

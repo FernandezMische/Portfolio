@@ -35,7 +35,7 @@ function App() {
           <p>© 2026 Mische Fernandez</p>
           <div className="footer-links">
             <a 
-              href="https://www.linkedin.com/in/mische-fernandez-046006294/" 
+              href="https://www.linkedin.com/in/misch%C3%A9-fernandez-42a63035b/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="footer-link"
