@@ -171,7 +171,7 @@ function ProjectSection({ project, index, onRepoClick, onLiveDemoClick }) {
 
   return (
     <Reveal delay={index * 100}>
-      <div className={`py-10 md:py-16 border-t border-[#dfe5db] ${!isEven ? 'bg-[var(--color-card-alt)] -mx-5 md:-mx-10 px-5 md:px-10' : ''}`}>
+      <div className={`py-10 md:py-16 border-t border-[#dfe5db] ${!isEven ? 'bg-[var(--color-card-alt)] md:-mx-10 md:px-10' : ''}`}>
       <div className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-12 items-center`}>
         <div className="flex-1">
           <p className="section-kicker mb-3">0{index + 1} / Project</p>

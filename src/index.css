@@ -20,14 +20,17 @@
 
   html {
     scroll-behavior: smooth;
+    overflow-x: clip;
   }
 
-  body {
+  body,
+  #root {
     background: var(--page-bg);
     color: var(--color-text);
     font-family: 'DM Sans', 'Trebuchet MS', sans-serif;
     min-height: 100vh;
-    overflow-x: hidden;
+    max-width: 100%;
+    overflow-x: clip;
   }
 
   .grid > * {
@@ -88,6 +91,8 @@
 
 .site-shell {
   min-height: 100vh;
+  max-width: 100%;
+  overflow-x: clip;
   background: var(--page-bg);
   --page-bg: #f8f6f0;
   --section-bg: #afc9a5;
@@ -121,6 +126,10 @@
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   font-weight: 700;
   pointer-events: none;
+}
+
+.mobile-code-stars {
+  display: none;
 }
 
 .code-star {
@@ -322,6 +331,20 @@
   transition: box-shadow 0.2s ease;
 }
 
+.profile-quote {
+  background: rgba(41, 72, 60, 0.88);
+  color: #f8f6f0;
+  opacity: 0;
+  transform: translateY(0.75rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile-photo:hover .profile-quote,
+.profile-photo:focus-within .profile-quote {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .theme-toggle {
   width: 2.2rem;
   height: 2.2rem;
@@ -392,6 +415,10 @@
   color: var(--color-primary);
 }
 
+.dark-mode .mobile-code-stars {
+  color: var(--color-primary);
+}
+
 .dark-mode .code-star {
   opacity: 0.22;
 }
@@ -423,10 +450,40 @@
   }
 
   .hero-art {
-    min-height: 15rem;
-    margin: 0.25rem 0 1rem;
-    --orbit-distance-one: 5.7rem;
-    --orbit-distance-two: 3.8rem;
+    display: none;
+  }
+
+  .home-hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .home-hero > .grid {
+    position: relative;
+    z-index: 1;
+  }
+
+  .mobile-code-stars {
+    position: absolute;
+    inset: 0;
+    display: block;
+    color: #567044;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-weight: 700;
+    pointer-events: none;
+  }
+
+  .mobile-code-stars .code-star {
+    opacity: 0.2;
+  }
+
+  .mobile-code-stars .code-star-one { top: 4%; left: 6%; }
+  .mobile-code-stars .code-star-two { top: 16%; right: 8%; }
+  .mobile-code-stars .code-star-three { top: 36%; left: 12%; }
+  .mobile-code-stars .code-star-four { top: 50%; right: 7%; }
+  .mobile-code-stars .code-star-five { top: 63%; left: 6%; }
+  .mobile-code-stars .code-star-six { top: 78%; right: 13%; font-size: 1.05rem; animation-delay: -5s; }
+  .mobile-code-stars .code-star-seven { bottom: 4%; left: 42%; font-size: 1rem; animation-delay: -2.5s; }
   }
 
   .orbit-ring {

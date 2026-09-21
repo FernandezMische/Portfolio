@@ -4,7 +4,17 @@ import Reveal from '../components/Reveal'
 function Home() {
   return (
     <div className="max-w-6xl mx-auto px-5 md:px-10 py-10 md:py-16">
-      <div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-12 lg:gap-20 items-end">
+      <div className="home-hero">
+        <div className="mobile-code-stars" aria-hidden="true">
+          <span className="code-star code-star-one">{'{ }'}</span>
+          <span className="code-star code-star-two">&lt;/&gt;</span>
+          <span className="code-star code-star-three">*</span>
+          <span className="code-star code-star-four">( )</span>
+          <span className="code-star code-star-five">;</span>
+          <span className="code-star code-star-six">[ ]</span>
+          <span className="code-star code-star-seven">=&gt;</span>
+        </div>
+        <div className="grid lg:grid-cols-[1.25fr_0.75fr] gap-12 lg:gap-20 items-end">
         <div className="hero-load">
           <p className="section-kicker mb-5">Full-stack developer · Cape Town</p>
           <h1 className="display-font text-[var(--color-secondary)] text-5xl sm:text-6xl md:text-7xl leading-[0.95] font-bold mb-7">
@@ -33,11 +43,12 @@ function Home() {
           <div className="orbit-ball orbit-ball-three"></div>
         </div>
         <div className="border-t border-[var(--color-primary)] pt-5 lg:mb-2">
-          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">I am because we are.</p>
+          <p className="text-[var(--color-text-muted)] text-sm leading-relaxed mb-5">A curious builder with a passion for technical problem-solving, clean interfaces, and collaborative work.</p>
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div><p className="text-[var(--color-accent)] font-bold">01</p><p className="text-[var(--color-secondary)] font-bold">Web development</p></div>
             <div><p className="text-[var(--color-accent)] font-bold">02</p><p className="text-[var(--color-secondary)] font-bold">Mobile experiences</p></div>
           </div>
+        </div>
         </div>
       </div>
 

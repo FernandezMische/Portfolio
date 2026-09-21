@@ -19,12 +19,15 @@ function About() {
       <div className="grid md:grid-cols-[0.8fr_1.2fr] gap-12 md:gap-20 items-start">
         <Reveal>
           <p className="section-kicker mb-5">A little about me</p>
-          <div className="w-48 h-60 md:w-64 md:h-80 overflow-hidden mb-6 bg-[var(--color-primary)] p-2">
+          <div className="profile-photo group relative w-48 h-60 md:w-64 md:h-80 overflow-hidden mb-6 bg-[var(--color-primary)] p-2">
           <img 
             src={profileImg} 
             alt="Mische Fernandez"
             className="w-full h-full object-cover"
           />
+          <div className="profile-quote absolute inset-2 flex items-center justify-center p-5 text-center">
+            <p className="display-font text-xl md:text-2xl font-bold leading-tight">I am because<br />we are.</p>
+          </div>
           </div>
           <h1 className="display-font text-[var(--color-secondary)] text-4xl md:text-5xl leading-tight font-bold mb-5">A developer who<br /><span className="text-[var(--color-accent)]">stays curious.</span></h1>
           <p className="text-[var(--color-text-muted)] text-sm">Based in Cape Town, South Africa</p>
